@@ -1,0 +1,10 @@
+Package: Rcurses
+Title: (n)curses R interface
+Version: 0.1
+Authors@R: person("Karl", "Forner", email = "karl.forner@gmail.com", role = c("aut", "cre"))
+Description: Prototype of a R ncurses interface.
+Depends:
+    R (>= 3.3.2)
+License: GPL (>= 3)
+LazyData: true
+RoxygenNote: 5.0.1
