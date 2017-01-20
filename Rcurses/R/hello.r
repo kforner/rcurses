@@ -1,7 +1,7 @@
 
-initscr <- function() .C('_initscr')
 
-endwin <- function() .C('_endwin')
+
+
 
 print_hello <- function() .C('_print_hello')
 
@@ -20,3 +20,4 @@ r_hello <- function() {
   getch()
 	endwin()
 }
+
