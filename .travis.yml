@@ -1,0 +1,9 @@
+language: r
+before_install: 
+  - cd Rcurses
+cache: packages
+addons:
+  apt:
+    packages:
+      - libncurses5-dev
+
