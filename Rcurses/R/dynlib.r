@@ -1,2 +1,2 @@
-#' @useDynLib Rcurses _hello
+#' @useDynLib Rcurses
 NULL
