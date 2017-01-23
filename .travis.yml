@@ -2,6 +2,7 @@ language: r
 before_install: 
   - cd Rcurses
 cache: packages
+pandoc: false
 addons:
   apt:
     packages:
