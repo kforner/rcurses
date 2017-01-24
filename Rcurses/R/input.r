@@ -3,4 +3,4 @@
 #'
 #' @export
 #' @family input
-getch <- function(s) .c('_getch')
+getch <- function() .c('_getch')
