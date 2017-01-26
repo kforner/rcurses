@@ -8,3 +8,6 @@ check-man: roxy
 
 check: roxy
 	Rscript -e 'devtools::check("$(PKG)")'
+	
+test: roxy
+	Rscript -e 'devtools::test("$(PKG)")'

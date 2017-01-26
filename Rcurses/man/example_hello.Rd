@@ -4,7 +4,10 @@
 \alias{example_hello}
 \title{hello world example}
 \usage{
-example_hello()
+example_hello(sleep = 5)
+}
+\arguments{
+\item{sleep}{sleep time before exiting}
 }
 \description{
 hello world example

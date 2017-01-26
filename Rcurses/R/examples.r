@@ -1,12 +1,13 @@
 #' hello world example
 #'
 #'
+#' @param sleep 	sleep time before exiting
 #' @export
 #' @family examples
-example_hello <- function() {
+example_hello <- function(sleep = 5) {
+  on.exit(endwin())
   initscr()
 	printw('Hello world !')
   refresh()
-  getch()
-	endwin()
+  Sys.sleep(sleep)
 }
