@@ -14,6 +14,6 @@ updates on the imaginary screen or windows and do a refresh once all his
  This improves performance and offers greater flexibility too. But, it is sometimes frustrating to beginners. A common mistake committed by beginners is to forget to call refresh() after they did some update through printw() class of functions. I still forget to add it sometimes :-)
 }
 \seealso{
-Other output: \code{\link{printw}}
+Other output: \code{\link{clear}}, \code{\link{printw}}
 }
 

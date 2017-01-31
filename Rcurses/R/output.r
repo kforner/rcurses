@@ -19,3 +19,15 @@ refresh <- function() .c('refresh')
 #' @export
 #' @family output
 printw <- function(s) .c('_printw', s, length(s))
+
+#' clear the screen
+#'
+#' The erase and werase routines copy blanks to every position in the window,
+#' clearing the screen.
+#' The  clear  and wclear routines are like erase and werase,
+#'  but they also call clearok, so that the screen is cleared completely
+#'  on the next call to wrefresh for that window and repainted from scratch.
+#'
+#' @export
+#' @family output
+clear <- function(s) .c('_clear')

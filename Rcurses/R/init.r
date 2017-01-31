@@ -34,3 +34,11 @@ raw <- function() .c('_raw')
 #' @family init
 endwin <- function() .c('_endwin')
 
+
+##' delete the standard screen
+##'
+##'
+##' @export
+##' @seealso initscr
+##' @family init
+#del_std_screen <- function() .c('_del_std_screen')

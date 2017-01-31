@@ -4,10 +4,11 @@ Version: 0.1
 Authors@R: person("Karl", "Forner", email = "karl.forner@gmail.com", role =
     c("aut", "cre"))
 Description: Prototype of a R ncurses interface.
-Depends:
-    R
-Suggests:
-    testthat
+Depends: R
+Suggests: testthat
 License: GPL (>= 3)
 LazyData: true
 RoxygenNote: 5.0.1
+Author: Karl Forner [aut, cre]
+Maintainer: Karl Forner <karl.forner@gmail.com>
+Built: R 3.3.2; x86_64-pc-linux-gnu; 2017-01-27 17:04:55 UTC; unix

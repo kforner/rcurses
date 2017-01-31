@@ -14,6 +14,6 @@ If you want to move the cursor first and then print using printw() function,
 use move() first and then use printw()
 }
 \seealso{
-Other output: \code{\link{refresh}}
+Other output: \code{\link{clear}}, \code{\link{refresh}}
 }
 

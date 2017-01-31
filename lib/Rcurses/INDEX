@@ -1,0 +1,9 @@
+endwin                  end the curses mode
+example_hello           hello world example
+getch                   wait for user input
+initscr                 initializes the terminal in curses mode.
+printw                  work much like printf()
+raw                     disable line buffering and signals by
+                        keystrokes
+refresh                 tell the curses system to dump the contents of
+                        the buffer to the screen.

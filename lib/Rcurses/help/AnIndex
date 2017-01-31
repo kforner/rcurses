@@ -1,0 +1,7 @@
+endwin	endwin
+example_hello	example_hello
+getch	getch
+initscr	initscr
+printw	printw
+raw	raw
+refresh	refresh

@@ -10,4 +10,6 @@ example_hello <- function(sleep = 5) {
 	printw('Hello world !')
   refresh()
   Sys.sleep(sleep)
+  clear()
+  refresh()
 }
