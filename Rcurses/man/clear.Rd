@@ -14,6 +14,7 @@ The  clear  and wclear routines are like erase and werase,
  on the next call to wrefresh for that window and repainted from scratch.
 }
 \seealso{
-Other output: \code{\link{printw}}, \code{\link{refresh}}
+Other output: \code{\link{getmaxyx}}, \code{\link{printw}},
+  \code{\link{refresh}}
 }
 

@@ -3,3 +3,4 @@ devtools::load_all('Rcurses')
 
 example_hello()
 
+test('Rcurses', 'coords')
