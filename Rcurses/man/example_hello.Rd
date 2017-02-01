@@ -12,4 +12,7 @@ example_hello(sleep = 5)
 \description{
 hello world example
 }
+\seealso{
+Other examples: \code{\link{example_mvprintw}}
+}
 

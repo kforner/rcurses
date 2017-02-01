@@ -4,7 +4,7 @@
 \alias{printw}
 \title{work much like printf()}
 \usage{
-printw(s)
+printw(str)
 }
 \arguments{
 \item{s}{a string to print}
@@ -15,6 +15,6 @@ use move() first and then use printw()
 }
 \seealso{
 Other output: \code{\link{clear}}, \code{\link{getmaxyx}},
-  \code{\link{refresh}}
+  \code{\link{mvprintw}}, \code{\link{refresh}}
 }
 

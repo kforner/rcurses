@@ -15,6 +15,6 @@ updates on the imaginary screen or windows and do a refresh once all his
 }
 \seealso{
 Other output: \code{\link{clear}}, \code{\link{getmaxyx}},
-  \code{\link{printw}}
+  \code{\link{mvprintw}}, \code{\link{printw}}
 }
 
