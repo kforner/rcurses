@@ -30,4 +30,4 @@ printw <- function(s) .c('_printw', s, length(s))
 #'
 #' @export
 #' @family output
-clear <- function(s) .c('_clear')
+clear <- function() .c('_clear')

@@ -4,7 +4,7 @@
 \alias{clear}
 \title{clear the screen}
 \usage{
-clear(s)
+clear()
 }
 \description{
 The erase and werase routines copy blanks to every position in the window,
