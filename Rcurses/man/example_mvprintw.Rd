@@ -8,6 +8,8 @@ example_mvprintw(sleep = 5, msg = "Just a string")
 }
 \arguments{
 \item{sleep}{sleep time before exiting}
+
+\item{msg}{the message to print in the center of the window}
 }
 \description{
 mvprintw example

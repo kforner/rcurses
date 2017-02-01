@@ -24,6 +24,8 @@ printw <- function(str) .c('_printw', str, length(str))
 #'
 #' may die if the position is outside the window
 #'
+#' @param y			the y position (aka the row)
+#' @param x			the x position (aka the column)
 #' @param str 	a string to print
 #' @export
 #' @family output

@@ -7,7 +7,7 @@
 printw(str)
 }
 \arguments{
-\item{s}{a string to print}
+\item{str}{a string to print}
 }
 \description{
 If you want to move the cursor first and then print using printw() function,

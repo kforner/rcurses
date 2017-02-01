@@ -7,6 +7,10 @@
 mvprintw(y, x, str)
 }
 \arguments{
+\item{y}{the y position (aka the row)}
+
+\item{x}{the x position (aka the column)}
+
 \item{str}{a string to print}
 }
 \description{

@@ -19,6 +19,7 @@ example_hello <- function(sleep = 5) {
 #'
 #'
 #' @param sleep 	sleep time before exiting
+#' @param msg			the message to print in the center of the window
 #' @export
 #' @family examples
 example_mvprintw <- function(sleep = 5, msg = 'Just a string') {
