@@ -29,7 +29,9 @@ printw <- function(str) .c('_printw', str, length(str))
 #' @param str 	a string to print
 #' @export
 #' @family output
-mvprintw <- function(y, x, str) {
+mvprintw <- function(y, x, str, ...) {
+  str <- sprintf(str, ...)
+
   if (length(str) != 1) stop("str must be a string")
   status <- 0L
 
