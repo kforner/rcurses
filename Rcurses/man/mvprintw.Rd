@@ -11,7 +11,9 @@ mvprintw(y, x, str, ...)
 
 \item{x}{the x position (aka the column)}
 
-\item{str}{a string to print}
+\item{str}{a string to print via sprintf}
+
+\item{...}{additiona ars for sprintf}
 }
 \description{
 may die if the position is outside the window

@@ -4,7 +4,7 @@
 \alias{example_getnstr}
 \title{getnstr example}
 \usage{
-example_getnstr()
+example_getnstr(sleep = 5, msg = "Just a string")
 }
 \arguments{
 \item{sleep}{sleep time before exiting}

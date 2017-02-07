@@ -47,7 +47,7 @@ example_mvprintw <- function(sleep = 5, msg = 'Just a string') {
 #' @param msg			the message to print in the center of the window
 #' @export
 #' @family examples
-example_getnstr <- function() {
+example_getnstr <- function(sleep = 5, msg = 'Just a string') {
   on.exit(endwin())
   initscr()
 
