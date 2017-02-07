@@ -47,7 +47,7 @@ example_mvprintw <- function(sleep = 5, msg = 'Just a string') {
 #' @param msg			the message to print in the center of the window
 #' @export
 #' @family examples
-example_getnstr <- function(sleep = 5, msg = 'Enter a string') {
+example_getnstr <- function() {
   on.exit(endwin())
   initscr()
 
@@ -63,6 +63,5 @@ example_getnstr <- function(sleep = 5, msg = 'Enter a string') {
   Sys.sleep(sleep)
   clear()
   refresh()
-browser()
-  print(str)
+
 }
