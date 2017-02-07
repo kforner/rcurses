@@ -4,7 +4,7 @@
 \alias{mvprintw}
 \title{perform a cursor movement using wmove then printw()}
 \usage{
-mvprintw(y, x, str)
+mvprintw(y, x, str, ...)
 }
 \arguments{
 \item{y}{the y position (aka the row)}

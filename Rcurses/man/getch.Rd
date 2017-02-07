@@ -9,4 +9,7 @@ getch()
 \description{
 wait for user input
 }
+\seealso{
+Other input: \code{\link{getnstr}}
+}
 

@@ -13,6 +13,7 @@ example_hello(sleep = 5)
 hello world example
 }
 \seealso{
-Other examples: \code{\link{example_mvprintw}}
+Other examples: \code{\link{example_getnstr}},
+  \code{\link{example_mvprintw}}
 }
 
