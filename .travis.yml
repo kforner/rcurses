@@ -8,3 +8,9 @@ addons:
     packages:
       - libncurses5-dev
 
+r_github_packages:
+  - jimhester/covr
+
+after_success:
+  - Rscript -e 'covr::codecov()'
+  
