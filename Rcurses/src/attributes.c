@@ -19,15 +19,10 @@ void _attributes(int* attrs) {
 //  attrs[i++] = COLOR_PAIR;
 }
 
-
-/*
 void _attron(int* _attrs) {
-  int attrs = 0;
-
-  if (attrs[0]) attrs |= A_NORMAL;
-  if (attrs[1]) attrs |= A_STANDOUT;
-  if (attrs[2]) attrs |= A_UNDERLINE;
-
-  attron(*attrs);
+  attron(*_attrs);
 }
-*/
+
+void _attroff(int* _attrs) {
+  attroff(*_attrs);
+}

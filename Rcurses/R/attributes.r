@@ -15,36 +15,36 @@ attributes <- function() {
   res$attrs
 }
 
-#
-##' turns on the given attributes without affecting any others.
-##'
-##' @export
-##' @family attributes
-#attron <- function(...) {
-#  #  altcharset = 0L,
-#  #  charset =  0L,
-##  color_pair = 0
-#  normal = FALSE,
-#  standout = FALSE,
-#  underline = FALSE,
-#  reverse = FALSE,
-#  blink = FALSE,
-#  dim = FALSE,
-#  bold = FALSE,
-#  protect = FALSE,
-#  invis = FALSE,
-#  italic = FALSE)
-#{
-#  attrs <- as.integer(c(
-#      normal,
-#      standout,
-#      underline,
-#      reverse,
-#      blink,
-#      dim,
-#      bold,
-#      protect,
-#      invis,
-#      italic))
-#  .c('_attron', attrs)
-#}
+
+r_attrs_to_c <- function(attrs) {
+  bads <- setdiff(attrs, names(ATTRIBUTES))
+  if (length(bads) > 0)
+    stop(sprintf('bad attributes: "%s"', paste(bads, collapse = ",")))
+
+  values <- ATTRIBUTES[attrs]
+  Reduce(bitwOr, values)
+}
+
+
+#' turns on the given attributes without affecting any others.
+#'
+#' @export
+#' @family attributes
+attron <- function(...) {
+  dots <- as.character(as.list(...))
+  c_attrs <- as.integer(r_attrs_to_c(dots))
+
+  .c('_attron', c_attrs)
+}
+
+#' turns off the given attributes without affecting any others.
+#'
+#' @export
+#' @family attributes
+attroff <- function(...) {
+  dots <- as.character(as.list(...))
+  c_attrs <- as.integer(r_attrs_to_c(dots))
+
+  .c('_attroff', c_attrs)
+}
+

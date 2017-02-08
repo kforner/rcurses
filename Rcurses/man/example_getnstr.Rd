@@ -15,7 +15,8 @@ example_getnstr(sleep = 5, msg = "Just a string")
 cf example 4 from NCURSES-Programming-HOWTO
 }
 \seealso{
-Other examples: \code{\link{example_hello}},
+Other examples: \code{\link{example_attron}},
+  \code{\link{example_hello}},
   \code{\link{example_mvprintw}}
 }
 

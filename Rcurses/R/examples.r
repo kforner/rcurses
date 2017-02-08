@@ -1,3 +1,43 @@
+#' attron example
+#'
+#'
+#' @param sleep 	sleep time before exiting
+#' @export
+#' @family examples
+example_attron <- function(sleep = 5) {
+  on.exit(endwin())
+  initscr()
+#  attron('A_NORMAL')
+	printw('Hello world !\n')
+
+  attron(style <- 'A_BOLD')
+  printw("I'm BOLD !\n")
+  attroff(style)
+
+  attron(style <- 'A_REVERSE')
+  printw("I'm REVERSED !\n")
+  attroff(style)
+
+  attron(style <- 'A_UNDERLINE')
+  printw("I'm UNDERLINED !\n")
+  attroff(style)
+
+  attron('A_UNDERLINE', 'A_BOLD')
+  printw("I'm BOLD and UNDERLINED !\n")
+  attroff('A_UNDERLINE', 'A_BOLD')
+
+  attron('A_UNDERLINE')
+  attron('A_BOLD')
+  printw("I'm BOLD and UNDERLINED !\n")
+  attroff('A_UNDERLINE')
+  attroff('A_BOLD')
+
+  refresh()
+  Sys.sleep(sleep)
+  clear()
+  refresh()
+}
+
 #' hello world example
 #'
 #'
@@ -39,6 +79,7 @@ example_mvprintw <- function(sleep = 5, msg = 'Just a string') {
   refresh()
 }
 
+
 #' getnstr example
 #'
 #' cf example 4 from NCURSES-Programming-HOWTO
@@ -47,6 +88,7 @@ example_mvprintw <- function(sleep = 5, msg = 'Just a string') {
 #' @param msg			the message to print in the center of the window
 #' @export
 #' @family examples
+# nocov start
 example_getnstr <- function(sleep = 5, msg = 'Just a string') {
   on.exit(endwin())
   initscr()
@@ -65,3 +107,4 @@ example_getnstr <- function(sleep = 5, msg = 'Just a string') {
   refresh()
 
 }
+# nocov end

@@ -9,4 +9,8 @@ attributes()
 \description{
 get the attributes values
 }
+\seealso{
+Other attributes: \code{\link{attroff}},
+  \code{\link{attron}}
+}
 
