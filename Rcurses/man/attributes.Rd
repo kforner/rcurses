@@ -11,6 +11,6 @@ get the attributes values
 }
 \seealso{
 Other attributes: \code{\link{attroff}},
-  \code{\link{attron}}
+  \code{\link{attron}}, \code{\link{with_attr}}
 }
 

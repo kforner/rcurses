@@ -19,10 +19,12 @@ void _attributes(int* attrs) {
 //  attrs[i++] = COLOR_PAIR;
 }
 
-void _attron(int* _attrs) {
-  attron(*_attrs);
+void _attron(int* _attrs, int * _n) {
+  for (int i = 0; i <*_n; i++)
+    attron(_attrs[i]);
 }
 
-void _attroff(int* _attrs) {
-  attroff(*_attrs);
+void _attroff(int* _attrs, int * _n) {
+  for (int i = 0; i <*_n; i++)
+    attroff(_attrs[i]);
 }

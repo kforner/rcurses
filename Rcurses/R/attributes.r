@@ -21,10 +21,24 @@ r_attrs_to_c <- function(attrs) {
   if (length(bads) > 0)
     stop(sprintf('bad attributes: "%s"', paste(bads, collapse = ",")))
 
-  values <- ATTRIBUTES[attrs]
-  Reduce(bitwOr, values)
+  values <- unique(ATTRIBUTES[attrs])
+
+#  Reduce(bitwOr, values)
+  values
 }
 
+#' evaluate some code with the the given attributes on
+#'
+#' @param code	the code to evaluate
+#' @param ...		passed to \code{\link{attron}} and \code{\link{attroff}}
+#' @export
+#' @family attributes
+with_attr <- function(code, ...)
+{
+  attron(...)
+  on.exit(attroff(...), add = TRUE)
+  force(code)
+}
 
 #' turns on the given attributes without affecting any others.
 #'
@@ -34,7 +48,7 @@ attron <- function(...) {
   dots <- as.character(as.list(...))
   c_attrs <- as.integer(r_attrs_to_c(dots))
 
-  .c('_attron', c_attrs)
+  .c('_attron', c_attrs, as.integer(length(c_attrs)))
 }
 
 #' turns off the given attributes without affecting any others.
@@ -45,6 +59,6 @@ attroff <- function(...) {
   dots <- as.character(as.list(...))
   c_attrs <- as.integer(r_attrs_to_c(dots))
 
-  .c('_attroff', c_attrs)
+  .c('_attroff', c_attrs, as.integer(length(c_attrs)))
 }
 

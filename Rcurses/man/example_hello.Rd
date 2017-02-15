@@ -13,7 +13,8 @@ example_hello(sleep = 5)
 hello world example
 }
 \seealso{
-Other examples: \code{\link{example_attron}},
+Other examples: \code{\link{example_attributes}},
+  \code{\link{example_attron}},
   \code{\link{example_getnstr}},
   \code{\link{example_mvprintw}}
 }

@@ -1,6 +1,13 @@
 context('attributes')
 
 
+.with_attr <- function() {
+  res <- with_attr(1 + 1, 'A_BOLD', 'A_REVERSE')
+  expect_equal(res, 2)
+}
+test_that('with_attr', .with_attr())
+
+
 .attron <- function() {
   attron('A_BOLD')
 
@@ -27,9 +34,8 @@ test_that('attron', .attron())
   expect_equal(ar, ATTRS$A_REVERSE)
 
   mix <- r_attrs_to_c(c('A_REVERSE', 'A_BOLD', 'A_NORMAL'))
-
-  expect_equal(mix, bitwOr(ab, bitwOr(ar, an)))
-
+  expect_equal(mix, c(ATTRS$A_REVERSE, ATTRS$A_BOLD, ATTRS$A_NORMAL))
+  #expect_equal(mix, bitwOr(ab, bitwOr(ar, an)))
 
   expect_equal(r_attrs_to_c('A_BOLD'), r_attrs_to_c(c('A_BOLD', 'A_BOLD')))
 }

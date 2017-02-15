@@ -1,3 +1,32 @@
+#' attributes example
+#'
+#'
+#' @param sleep 	sleep time before exiting
+#' @export
+#' @family examples
+example_attributes <- function(sleep = 5) {
+  on.exit(endwin())
+  initscr()
+#  attron('A_NORMAL')
+	printw('Hello world !\n')
+
+  with_attr(printw("I'm BOLD !\n"), 'A_BOLD')
+
+  with_attr(printw("I'm REVERSED !\n"), 'A_REVERSE')
+
+  with_attr(printw("I'm UNDERLINED !\n"), 'A_UNDERLINE')
+
+  with_attr(printw("I'm BOLD and UNDERLINED !\n"), 'A_UNDERLINE', 'A_BOLD')
+
+
+
+  refresh()
+  Sys.sleep(sleep)
+  clear()
+  refresh()
+}
+
+
 #' attron example
 #'
 #'
@@ -7,30 +36,12 @@
 example_attron <- function(sleep = 5) {
   on.exit(endwin())
   initscr()
-#  attron('A_NORMAL')
-	printw('Hello world !\n')
 
-  attron(style <- 'A_BOLD')
-  printw("I'm BOLD !\n")
-  attroff(style)
-
-  attron(style <- 'A_REVERSE')
-  printw("I'm REVERSED !\n")
-  attroff(style)
-
-  attron(style <- 'A_UNDERLINE')
-  printw("I'm UNDERLINED !\n")
-  attroff(style)
-
-  attron('A_UNDERLINE', 'A_BOLD')
-  printw("I'm BOLD and UNDERLINED !\n")
-  attroff('A_UNDERLINE', 'A_BOLD')
-
-  attron('A_UNDERLINE')
   attron('A_BOLD')
+  attron('A_UNDERLINE')
   printw("I'm BOLD and UNDERLINED !\n")
-  attroff('A_UNDERLINE')
   attroff('A_BOLD')
+  attroff('A_UNDERLINE')
 
   refresh()
   Sys.sleep(sleep)

@@ -11,6 +11,6 @@ turns off the given attributes without affecting any others.
 }
 \seealso{
 Other attributes: \code{\link{attributes}},
-  \code{\link{attron}}
+  \code{\link{attron}}, \code{\link{with_attr}}
 }
 

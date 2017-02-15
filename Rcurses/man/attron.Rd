@@ -11,6 +11,6 @@ turns on the given attributes without affecting any others.
 }
 \seealso{
 Other attributes: \code{\link{attributes}},
-  \code{\link{attroff}}
+  \code{\link{attroff}}, \code{\link{with_attr}}
 }
 
