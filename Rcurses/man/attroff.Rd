@@ -6,6 +6,9 @@
 \usage{
 attroff(...)
 }
+\arguments{
+\item{...}{any valid attributes}
+}
 \description{
 turns off the given attributes without affecting any others.
 }

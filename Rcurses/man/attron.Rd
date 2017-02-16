@@ -6,6 +6,9 @@
 \usage{
 attron(...)
 }
+\arguments{
+\item{...}{any valid attributes}
+}
 \description{
 turns on the given attributes without affecting any others.
 }

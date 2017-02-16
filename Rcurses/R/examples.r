@@ -37,11 +37,9 @@ example_attron <- function(sleep = 5) {
   on.exit(endwin())
   initscr()
 
-  attron('A_BOLD')
-  attron('A_UNDERLINE')
+  attron('A_BOLD', 'A_UNDERLINE')
   printw("I'm BOLD and UNDERLINED !\n")
-  attroff('A_BOLD')
-  attroff('A_UNDERLINE')
+  attroff('A_BOLD', 'A_UNDERLINE')
 
   refresh()
   Sys.sleep(sleep)

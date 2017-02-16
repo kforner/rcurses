@@ -42,10 +42,11 @@ with_attr <- function(code, ...)
 
 #' turns on the given attributes without affecting any others.
 #'
+#' @param ...	any valid attributes
 #' @export
 #' @family attributes
 attron <- function(...) {
-  dots <- as.character(as.list(...))
+  dots <- as.character(list(...))
   c_attrs <- as.integer(r_attrs_to_c(dots))
 
   .c('_attron', c_attrs, as.integer(length(c_attrs)))
@@ -53,10 +54,11 @@ attron <- function(...) {
 
 #' turns off the given attributes without affecting any others.
 #'
+#' @param ...	any valid attributes
 #' @export
 #' @family attributes
 attroff <- function(...) {
-  dots <- as.character(as.list(...))
+  dots <- as.character(list(...))
   c_attrs <- as.integer(r_attrs_to_c(dots))
 
   .c('_attroff', c_attrs, as.integer(length(c_attrs)))
