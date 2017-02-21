@@ -27,7 +27,7 @@ printw <- function(str) .c('_printw', str, length(str))
 #' @param y			the y position (aka the row)
 #' @param x			the x position (aka the column)
 #' @param str 	a string to print via sprintf
-#' @param ...		additiona ars for sprintf
+#' @param ...		additional args for sprintf
 #' @export
 #' @family output
 mvprintw <- function(y, x, str, ...) {

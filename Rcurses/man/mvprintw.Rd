@@ -13,7 +13,7 @@ mvprintw(y, x, str, ...)
 
 \item{str}{a string to print via sprintf}
 
-\item{...}{additiona ars for sprintf}
+\item{...}{additional args for sprintf}
 }
 \description{
 may die if the position is outside the window
