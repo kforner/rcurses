@@ -9,4 +9,7 @@ stdscr()
 \description{
 get the stdscr window as am external pointer
 }
+\seealso{
+Other window: \code{\link{box}}
+}
 

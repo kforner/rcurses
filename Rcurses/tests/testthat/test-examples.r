@@ -16,3 +16,10 @@ test_that('example_mvprintw', .example_mvprintw())
   expect_error(example_attron(0.2), NA)
 }
 test_that('example_attron', .example_attron())
+
+
+
+.example_box <- function() {
+  expect_error(example_box(0.2), NA)
+}
+test_that('example_box', .example_box())

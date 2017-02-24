@@ -15,3 +15,8 @@ SEXP create_external_window(WINDOW* win) {
 SEXP _stdscr() {
   return create_external_window(stdscr);
 }
+
+
+SEXP _box00(SEXP _win) {
+  box((WINDOW*)R_ExternalPtrAddr(_win), 0, 0);
+}

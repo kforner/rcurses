@@ -64,6 +64,27 @@ example_hello <- function(sleep = 5) {
 }
 
 
+#' box example
+#'
+#'
+#' @param sleep 	sleep time before exiting
+#' @export
+#' @family examples
+example_box <- function(sleep = 5) {
+  on.exit(endwin())
+  initscr()
+
+  box()
+
+	printw('Hello world !')
+  refresh()
+  Sys.sleep(sleep)
+  clear()
+  refresh()
+}
+
+
+
 #' mvprintw example
 #'
 #' @param sleep 	sleep time before exiting
