@@ -10,13 +10,13 @@ example_attributes <- function(sleep = 5) {
 #  attron('A_NORMAL')
 	printw('Hello world !\n')
 
-  with_attr(printw("I'm BOLD !\n"), 'A_BOLD')
+  with_attr(printw("I'm BOLD !\n"), A_BOLD)
 
-  with_attr(printw("I'm REVERSED !\n"), 'A_REVERSE')
+  with_attr(printw("I'm REVERSED !\n"), A_REVERSE)
 
-  with_attr(printw("I'm UNDERLINED !\n"), 'A_UNDERLINE')
+  with_attr(printw("I'm UNDERLINED !\n"), A_UNDERLINE)
 
-  with_attr(printw("I'm BOLD and UNDERLINED !\n"), 'A_UNDERLINE', 'A_BOLD')
+  with_attr(printw("I'm BOLD and UNDERLINED !\n"), A_UNDERLINE, A_BOLD)
 
 
 
@@ -37,9 +37,9 @@ example_attron <- function(sleep = 5) {
   on.exit(endwin())
   initscr()
 
-  attron('A_BOLD', 'A_UNDERLINE')
+  attron(A_BOLD, A_UNDERLINE)
   printw("I'm BOLD and UNDERLINED !\n")
-  attroff('A_BOLD', 'A_UNDERLINE')
+  attroff(A_BOLD, A_UNDERLINE)
 
   refresh()
   Sys.sleep(sleep)
