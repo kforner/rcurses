@@ -16,8 +16,7 @@ a named list of y, x (or #rows, #cols)
 get the current beginning coordinates and size of the default window.
 }
 \seealso{
-Other output: \code{\link{clear}}, \code{\link{getmaxyx2}},
-  \code{\link{mvprintw}}, \code{\link{printw}},
-  \code{\link{refresh}}
+Other coords: \code{\link{COLS}}, \code{\link{LINES}},
+  \code{\link{getmaxyx2}}
 }
 

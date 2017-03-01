@@ -19,8 +19,7 @@ mvprintw(y, x, str, ...)
 may die if the position is outside the window
 }
 \seealso{
-Other output: \code{\link{clear}}, \code{\link{getmaxyx2}},
-  \code{\link{getmaxyx}}, \code{\link{printw}},
+Other output: \code{\link{clear}}, \code{\link{printw}},
   \code{\link{refresh}}
 }
 

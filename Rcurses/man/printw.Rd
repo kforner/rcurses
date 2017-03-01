@@ -14,8 +14,7 @@ If you want to move the cursor first and then print using printw() function,
 use move() first and then use printw()
 }
 \seealso{
-Other output: \code{\link{clear}}, \code{\link{getmaxyx2}},
-  \code{\link{getmaxyx}}, \code{\link{mvprintw}},
+Other output: \code{\link{clear}}, \code{\link{mvprintw}},
   \code{\link{refresh}}
 }
 

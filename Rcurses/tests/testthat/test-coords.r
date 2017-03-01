@@ -12,3 +12,9 @@ context('coords')
 }
 test_that('getmaxyx', .getmaxyx())
 
+
+.lines_cols <- function() {
+  expect_gt(COLS(), 0)
+  expect_gt(LINES(), 0)
+}
+test_that('lines_cols', .lines_cols())
