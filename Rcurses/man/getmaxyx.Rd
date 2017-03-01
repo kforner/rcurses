@@ -16,7 +16,6 @@ a named list of y, x (or #rows, #cols)
 get the current beginning coordinates and size of the default window.
 }
 \seealso{
-Other coords: \code{\link{COLS}}, \code{\link{LINES}},
-  \code{\link{getmaxyx2}}
+Other coords: \code{\link{COLS}}, \code{\link{LINES}}
 }
 

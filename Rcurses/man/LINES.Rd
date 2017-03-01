@@ -13,7 +13,6 @@ the number of lines
 the  height of the screen in characters.
 }
 \seealso{
-Other coords: \code{\link{COLS}}, \code{\link{getmaxyx2}},
-  \code{\link{getmaxyx}}
+Other coords: \code{\link{COLS}}, \code{\link{getmaxyx}}
 }
 

@@ -13,7 +13,6 @@ the number of columns
 the  width of the screen in characters.
 }
 \seealso{
-Other coords: \code{\link{LINES}}, \code{\link{getmaxyx2}},
-  \code{\link{getmaxyx}}
+Other coords: \code{\link{LINES}}, \code{\link{getmaxyx}}
 }
 
