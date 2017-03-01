@@ -1,5 +1,20 @@
 context('examples')
 
+
+.example_attributes <- function() {
+  expect_error(example_attributes(0.2), NA)
+}
+test_that('example_attributes', .example_attributes())
+
+
+
+.example_attron <- function() {
+  expect_error(example_attron(0.2), NA)
+}
+test_that('example_attron', .example_attron())
+
+
+
 .example_hello <- function() {
   expect_error(example_hello(0.2), NA)
 }
@@ -12,6 +27,8 @@ test_that('example_hello', .example_hello())
 }
 test_that('example_mvprintw', .example_mvprintw())
 
+
+
 .example_attron <- function() {
   expect_error(example_attron(0.2), NA)
 }
@@ -23,3 +40,6 @@ test_that('example_attron', .example_attron())
   expect_error(example_box(0.2), NA)
 }
 test_that('example_box', .example_box())
+
+
+
