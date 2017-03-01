@@ -1,7 +1,21 @@
-
+#' VIDEO ATTRIBUTES
+#'
+#'               A_NORMAL       Normal display (no highlight)
+#'               A_STANDOUT     Best highlighting mode of the terminal.
+#'              A_UNDERLINE    Underlining
+#'               A_REVERSE      Reverse video
+#'               A_BLINK        Blinking
+#'               A_DIM          Half bright
+#'               A_BOLD         Extra bright or bold
+#'               A_PROTECT      Protected mode
+#'               A_INVIS        Invisible or blank mode
+#'               A_ALTCHARSET   Alternate character set
+#'               A_ITALIC       Italics (non-X/Open extension)
+#'               A_CHARTEXT     Bit-mask to extract a character
+#' @aliases A_NORMAL A_STANDOUT A_UNDERLINE A_REVERSE A_BLINK A_DIM A_BOLD A_PROTECT A_INVIS A_ALTCHARSET A_CHARTEXT
+#' @rdname VIDEO_ATTRIBUTES
 #' @export A_NORMAL A_STANDOUT A_UNDERLINE A_REVERSE A_BLINK A_DIM A_BOLD
 #' @export A_PROTECT A_INVIS A_ALTCHARSET A_CHARTEXT
-
 ATTRIBUTE_NAMES <- c("A_NORMAL", "A_STANDOUT", "A_UNDERLINE", "A_REVERSE", "A_BLINK",
   "A_DIM", "A_BOLD", "A_PROTECT", "A_INVIS", "A_ALTCHARSET", "A_CHARTEXT")
 
