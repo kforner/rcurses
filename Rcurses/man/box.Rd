@@ -13,6 +13,7 @@ box(win = stdscr())
 draw a box around a window
 }
 \seealso{
-Other window: \code{\link{stdscr}}
+Other window: \code{\link{delwin}}, \code{\link{newwin}},
+  \code{\link{stdscr}}
 }
 

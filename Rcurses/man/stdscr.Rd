@@ -6,10 +6,14 @@
 \usage{
 stdscr()
 }
+\value{
+a new window as an external pointer
+}
 \description{
 get the stdscr window as am external pointer
 }
 \seealso{
-Other window: \code{\link{box}}
+Other window: \code{\link{box}}, \code{\link{delwin}},
+  \code{\link{newwin}}
 }
 
