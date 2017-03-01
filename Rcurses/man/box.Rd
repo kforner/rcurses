@@ -7,13 +7,13 @@
 box(win = stdscr())
 }
 \arguments{
-\item{win}{a window}
+\item{win}{a window object as an external pointer}
 }
 \description{
 draw a box around a window
 }
 \seealso{
-Other window: \code{\link{delwin}}, \code{\link{newwin}},
-  \code{\link{stdscr}}
+Other window: \code{\link{delwin}}, \code{\link{mvwin}},
+  \code{\link{newwin}}, \code{\link{stdscr}}
 }
 

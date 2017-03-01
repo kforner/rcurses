@@ -13,12 +13,12 @@ delwin(win)
 TRUE iff the window has been deleted
 }
 \description{
-free all memo-ry associated with it (it does not actually erase the win-
+free all memory associated with it (it does not actually erase the win-
      dow's screen image).  Subwindows must  be  deleted  before
      the main window can be deleted.
 }
 \seealso{
-Other window: \code{\link{box}}, \code{\link{newwin}},
-  \code{\link{stdscr}}
+Other window: \code{\link{box}}, \code{\link{mvwin}},
+  \code{\link{newwin}}, \code{\link{stdscr}}
 }
 

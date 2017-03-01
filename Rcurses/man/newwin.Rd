@@ -6,6 +6,15 @@
 \usage{
 newwin(nlines = 0, ncols = 0, y = 0, x = 0)
 }
+\arguments{
+\item{nlines}{the number of lines of the window}
+
+\item{ncols}{the number of columns of the window}
+
+\item{y}{the upper y position}
+
+\item{x}{the left x position}
+}
 \value{
 a new window as an external pointer
 }
@@ -19,6 +28,6 @@ If either nlines or ncols is zero, they default to
 }
 \seealso{
 Other window: \code{\link{box}}, \code{\link{delwin}},
-  \code{\link{stdscr}}
+  \code{\link{mvwin}}, \code{\link{stdscr}}
 }
 

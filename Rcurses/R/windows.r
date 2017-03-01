@@ -1,3 +1,15 @@
+#' window params
+#'
+#' @param win		a window object as an external pointer
+#' @param nlines 	the number of lines of the window
+#' @param ncols		the number of columns of the window
+#' @param	y				the upper y position
+#' @param x				the left x position
+#'
+#' @name window_params
+#' @keywords internal
+NULL
+
 #' get the stdscr window as am external pointer
 #'
 #' @return a new window as an external pointer
@@ -10,7 +22,7 @@ stdscr <- function() {
 
 #' draw a box around a window
 #'
-#' @param win 	a window
+#' @inheritParams window_params
 #' @export
 #' @family window
 box <- function(win = stdscr()) {
@@ -27,7 +39,7 @@ box <- function(win = stdscr()) {
 #'      LINES - begin_y and
 #'      COLS - begin_x.
 #'
-#'
+#' @inheritParams window_params
 #' @return a new window as an external pointer
 #' @export
 #' @family window
@@ -38,15 +50,31 @@ newwin <- function(nlines = 0, ncols = 0, y = 0, x = 0) {
 
 #' delete the window
 #'
-#' free all memo-ry associated with it (it does not actually erase the win-
+#' free all memory associated with it (it does not actually erase the win-
 #'      dow's screen image).  Subwindows must  be  deleted  before
 #'      the main window can be deleted.
 #'
-#' @param win	a window object as an external pointer
+#' @inheritParams window_params
 #' @return TRUE iff the window has been deleted
 #' @export
 #' @family window
 delwin <- function(win) {
-  as.logical(.call('_delwin', win))
+  invisible(as.logical(.call('_delwin', win)))
 }
 
+
+#' moves the window so that the upper left-hand corner is at position (x, y)
+#'
+#' If the move would cause the
+#'       window to be off the screen, it is an error and the window
+#'       is not moved.  Moving subwindows is allowed, but should be
+#'       avoided.
+#'
+#' @inheritParams window_params
+#'
+#' @return TRUE iff the window has been moved
+#' @export
+#' @family window
+mvwin <- function(win, y, x) {
+  invisible(as.logical(.call('_mvwin', win, as.integer(y), as.integer(x))))
+}

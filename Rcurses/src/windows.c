@@ -2,9 +2,16 @@
 #include <Rinternals.h>
 #include <ncurses.h>
 
+SEXP create_status(int status) {
+  SEXP out = PROTECT(allocVector(INTSXP, 1));
+  INTEGER(out)[0] = status != ERR ? 1 : 0;
+  UNPROTECT(1);
+
+  return out;
+}
+
 
 // create an external pointer around a WINDOW* without a finalizer
-
 SEXP create_external_window(WINDOW* win) {
   SEXP ptr = R_MakeExternalPtr(win, install("ncurses WINDOW"), R_NilValue);
 
@@ -37,11 +44,18 @@ SEXP _delwin(SEXP _win) {
   if (!R_ExternalPtrAddr(_win)) return R_NilValue;
 
   int status = delwin((WINDOW*)R_ExternalPtrAddr(_win));
-
-  SEXP out = PROTECT(allocVector(INTSXP, 1));
-  INTEGER(out)[0] = status != ERR ? 1 : 0;
-  UNPROTECT(1);
-
-  return out;
+  return create_status(status);
 }
 
+
+
+SEXP _mvwin(SEXP _win, SEXP _y, SEXP _x) {
+  if (!R_ExternalPtrAddr(_win)) return R_NilValue;
+
+  int status = mvwin(
+      (WINDOW*)R_ExternalPtrAddr(_win),
+      INTEGER(_y)[0],
+      INTEGER(_x)[0]);
+
+  return create_status(status);
+}

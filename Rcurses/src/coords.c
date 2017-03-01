@@ -30,3 +30,4 @@ SEXP _getmaxyx(SEXP _win) {
   UNPROTECT(1);
   return out;
 }
+

@@ -8,6 +8,8 @@ context('window')
 }
 test_that('box', .box())
 
+
+
 .newwin_delwin <- function() {
   win <- newwin()
   expect_is(win, 'externalptr')
@@ -15,4 +17,16 @@ test_that('box', .box())
   expect_true(delwin(win))
   expect_false(delwin(win))
 }
-test_that('box', .box())
+test_that('newwin_delwin', .newwin_delwin())
+
+
+
+.mvwin <- function() {
+  win <- newwin()
+  on.exit(delwin(win))
+
+  expect_true(mvwin(win , 0, 0))
+}
+test_that('mvwin', .mvwin())
+
+
