@@ -15,6 +15,6 @@ use move() first and then use printw()
 }
 \seealso{
 Other output: \code{\link{clear}}, \code{\link{mvprintw}},
-  \code{\link{refresh}}
+  \code{\link{refresh}}, \code{\link{wrefresh}}
 }
 

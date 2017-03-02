@@ -2,19 +2,15 @@
 % Please edit documentation in R/refresh.r
 \name{refresh}
 \alias{refresh}
-\title{tell the curses system to dump the contents of the buffer to the screen.}
+\title{refresh the default window}
 \usage{
 refresh()
 }
 \description{
-The philosophy behind all this is to allow the programmer to do multiple
-updates on the imaginary screen or windows and do a refresh once all his
- screen update is done. refresh() checks the window and updates
- only the portion which has been changed.
- This improves performance and offers greater flexibility too. But, it is sometimes frustrating to beginners. A common mistake committed by beginners is to forget to call refresh() after they did some update through printw() class of functions. I still forget to add it sometimes :-)
+refresh the default window
 }
 \seealso{
 Other output: \code{\link{clear}}, \code{\link{mvprintw}},
-  \code{\link{printw}}
+  \code{\link{printw}}, \code{\link{wrefresh}}
 }
 

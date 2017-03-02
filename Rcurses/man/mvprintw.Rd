@@ -20,6 +20,6 @@ may die if the position is outside the window
 }
 \seealso{
 Other output: \code{\link{clear}}, \code{\link{printw}},
-  \code{\link{refresh}}
+  \code{\link{refresh}}, \code{\link{wrefresh}}
 }
 
