@@ -63,6 +63,19 @@ subwin <- function(win, nlines, ncols, y, x) {
   .call('_subwin', win, as.integer(c(nlines, ncols, y, x)))
 }
 
+#' create a new sub window with positions relative to its parent window
+#'
+#' Calling derwin is the same as calling subwin, except  that
+#' begin_y and begin_x are relative to the origin of the win-
+#'  dow orig rather than the screen.
+#'
+#' @inheritParams window_params
+#' @return a new window as an external pointer
+#' @export
+#' @family window
+derwin <- function(win, nlines, ncols, y, x) {
+  .call('_derwin', win, as.integer(c(nlines, ncols, y, x)))
+}
 
 #' delete the window
 #'

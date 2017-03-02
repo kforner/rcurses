@@ -18,8 +18,8 @@ free all memory associated with it (it does not actually erase the win-
      the main window can be deleted.
 }
 \seealso{
-Other window: \code{\link{box}}, \code{\link{mvwin}},
-  \code{\link{newwin}}, \code{\link{stdscr}},
-  \code{\link{subwin}}
+Other window: \code{\link{box}}, \code{\link{derwin}},
+  \code{\link{mvwin}}, \code{\link{newwin}},
+  \code{\link{stdscr}}, \code{\link{subwin}}
 }
 
