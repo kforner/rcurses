@@ -17,8 +17,8 @@ creates  an exact duplicate of a window
 }
 \seealso{
 Other window: \code{\link{box}}, \code{\link{delwin}},
-  \code{\link{derwin}}, \code{\link{mvwin}},
-  \code{\link{newwin}}, \code{\link{stdscr}},
-  \code{\link{subwin}}
+  \code{\link{derwin}}, \code{\link{mvderwin}},
+  \code{\link{mvwin}}, \code{\link{newwin}},
+  \code{\link{stdscr}}, \code{\link{subwin}}
 }
 

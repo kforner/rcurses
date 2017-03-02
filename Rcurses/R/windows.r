@@ -77,6 +77,21 @@ derwin <- function(win, nlines, ncols, y, x) {
   .call('_derwin', win, as.integer(c(nlines, ncols, y, x)))
 }
 
+#'  moves a derived window (or subwindow) inside its parent window.
+#'
+#' The screen-relative parameters of the  window are not changed.
+#' This routine is used to display different parts of the  parent  window
+#'  at  the  same physical position on the screen.
+#'
+#' @inheritParams window_params
+#' @return TRUE iff the window has been moved
+#' @export
+#' @family window
+mvderwin <- function(win, y, x) {
+  invisible(as.logical(.call('_mvderwin', win, as.integer(y), as.integer(x))))
+}
+
+
 #' creates  an exact duplicate of a window
 #'
 #' @inheritParams window_params

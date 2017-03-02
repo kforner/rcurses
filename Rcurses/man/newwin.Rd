@@ -29,7 +29,7 @@ If either nlines or ncols is zero, they default to
 \seealso{
 Other window: \code{\link{box}}, \code{\link{delwin}},
   \code{\link{derwin}}, \code{\link{dupwin}},
-  \code{\link{mvwin}}, \code{\link{stdscr}},
-  \code{\link{subwin}}
+  \code{\link{mvderwin}}, \code{\link{mvwin}},
+  \code{\link{stdscr}}, \code{\link{subwin}}
 }
 

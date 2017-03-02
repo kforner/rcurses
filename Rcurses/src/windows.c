@@ -81,6 +81,17 @@ SEXP _delwin(SEXP _win) {
 }
 
 
+SEXP _mvderwin(SEXP _win, SEXP _y, SEXP _x) {
+  if (!R_ExternalPtrAddr(_win)) return R_NilValue;
+
+  int status = mvderwin(
+      (WINDOW*)R_ExternalPtrAddr(_win),
+      INTEGER(_y)[0],
+      INTEGER(_x)[0]);
+
+  return create_status(status);
+}
+
 
 SEXP _mvwin(SEXP _win, SEXP _y, SEXP _x) {
   if (!R_ExternalPtrAddr(_win)) return R_NilValue;
