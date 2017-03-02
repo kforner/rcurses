@@ -133,3 +133,26 @@ delwin <- function(win) {
 mvwin <- function(win, y, x) {
   invisible(as.logical(.call('_mvwin', win, as.integer(y), as.integer(x))))
 }
+
+
+#' touches all locations in ancestors of  win that  are changed in win.
+#'
+#' @inheritParams window_params
+#' @export
+#' @family window
+wsyncup <- function(win) {
+  .call('_wsyncup', win)
+  invisible()
+}
+
+#' seup automatic window wync
+#'
+#' @inheritParams window_params
+#' @param bf	if TRUE then wsyncup is called automatically whenever
+#' 						there is a change in the window.
+#' @return TRUE on success
+#' @export
+#' @family window
+syncok <- function(win, bf) {
+  invisible(as.logical(.call('_syncok', win, as.integer(bf))))
+}

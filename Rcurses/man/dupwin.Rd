@@ -19,6 +19,7 @@ creates  an exact duplicate of a window
 Other window: \code{\link{box}}, \code{\link{delwin}},
   \code{\link{derwin}}, \code{\link{mvderwin}},
   \code{\link{mvwin}}, \code{\link{newwin}},
-  \code{\link{stdscr}}, \code{\link{subwin}}
+  \code{\link{stdscr}}, \code{\link{subwin}},
+  \code{\link{syncok}}, \code{\link{wsyncup}}
 }
 

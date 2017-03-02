@@ -21,6 +21,7 @@ free all memory associated with it (it does not actually erase the win-
 Other window: \code{\link{box}}, \code{\link{derwin}},
   \code{\link{dupwin}}, \code{\link{mvderwin}},
   \code{\link{mvwin}}, \code{\link{newwin}},
-  \code{\link{stdscr}}, \code{\link{subwin}}
+  \code{\link{stdscr}}, \code{\link{subwin}},
+  \code{\link{syncok}}, \code{\link{wsyncup}}
 }
 

@@ -16,6 +16,7 @@ get the stdscr window as am external pointer
 Other window: \code{\link{box}}, \code{\link{delwin}},
   \code{\link{derwin}}, \code{\link{dupwin}},
   \code{\link{mvderwin}}, \code{\link{mvwin}},
-  \code{\link{newwin}}, \code{\link{subwin}}
+  \code{\link{newwin}}, \code{\link{subwin}},
+  \code{\link{syncok}}, \code{\link{wsyncup}}
 }
 

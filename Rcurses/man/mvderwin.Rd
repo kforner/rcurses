@@ -25,6 +25,7 @@ This routine is used to display different parts of the  parent  window
 Other window: \code{\link{box}}, \code{\link{delwin}},
   \code{\link{derwin}}, \code{\link{dupwin}},
   \code{\link{mvwin}}, \code{\link{newwin}},
-  \code{\link{stdscr}}, \code{\link{subwin}}
+  \code{\link{stdscr}}, \code{\link{subwin}},
+  \code{\link{syncok}}, \code{\link{wsyncup}}
 }
 

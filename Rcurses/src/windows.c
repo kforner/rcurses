@@ -103,3 +103,17 @@ SEXP _mvwin(SEXP _win, SEXP _y, SEXP _x) {
 
   return create_status(status);
 }
+
+SEXP _wsyncup(SEXP _win) {
+  if (!R_ExternalPtrAddr(_win)) return R_NilValue;
+  wsyncup((WINDOW*)R_ExternalPtrAddr(_win));
+  return R_NilValue;
+}
+
+SEXP _syncok(SEXP _win, SEXP _bf) {
+  if (!R_ExternalPtrAddr(_win)) return R_NilValue;
+  int status = syncok((WINDOW*)R_ExternalPtrAddr(_win), INTEGER(_bf)[0]);
+  return create_status(status);
+}
+
+

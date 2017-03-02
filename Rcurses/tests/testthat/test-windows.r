@@ -88,3 +88,18 @@ test_that('dupwin', .dupwin())
 test_that('mvwin', .mvwin())
 
 
+
+.wsyncup <- function() {
+  on.exit(endwin())
+  initscr()
+  wsyncup(stdscr())
+}
+test_that('wsyncup', .wsyncup())
+
+
+.syncok <- function() {
+  on.exit(endwin())
+  initscr()
+  expect_true(syncok(stdscr(), TRUE))
+}
+test_that('syncok', .syncok())
