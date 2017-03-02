@@ -11,6 +11,8 @@ test_that('box', .box())
 
 
 .newwin_delwin <- function() {
+  on.exit(endwin())
+  initscr()
   win <- newwin()
   expect_is(win, 'externalptr')
 
@@ -19,6 +21,18 @@ test_that('box', .box())
 }
 test_that('newwin_delwin', .newwin_delwin())
 
+
+.subwin <- function() {
+  on.exit(endwin())
+  initscr()
+
+  win <- newwin()
+  sub <- subwin(win, 2, 2, 0, 0)
+
+  delwin(sub)
+  delwin(win)
+}
+test_that('subwin', .subwin())
 
 
 .mvwin <- function() {

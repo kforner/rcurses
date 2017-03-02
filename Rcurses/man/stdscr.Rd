@@ -14,6 +14,7 @@ get the stdscr window as am external pointer
 }
 \seealso{
 Other window: \code{\link{box}}, \code{\link{delwin}},
-  \code{\link{mvwin}}, \code{\link{newwin}}
+  \code{\link{mvwin}}, \code{\link{newwin}},
+  \code{\link{subwin}}
 }
 

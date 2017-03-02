@@ -14,6 +14,7 @@ draw a box around a window
 }
 \seealso{
 Other window: \code{\link{delwin}}, \code{\link{mvwin}},
-  \code{\link{newwin}}, \code{\link{stdscr}}
+  \code{\link{newwin}}, \code{\link{stdscr}},
+  \code{\link{subwin}}
 }
 

@@ -17,7 +17,6 @@ NULL
 #' @family window
 stdscr <- function() {
   .call('_stdscr')
-
 }
 
 #' draw a box around a window
@@ -45,6 +44,23 @@ box <- function(win = stdscr()) {
 #' @family window
 newwin <- function(nlines = 0, ncols = 0, y = 0, x = 0) {
   .call('_newwin', as.integer(c(nlines, ncols, y, x)))
+}
+
+#' create a new sub window
+#'
+#' with defaults create a full-screen window
+#' The subwindow shares memory with  the  window
+#'       orig,  so that changes made to one window will affect both
+#'       windows.  When using this routine, it is necessary to call
+#'       touchwin  or  touchline on orig before calling wrefresh on
+#'      the subwindow.
+#'
+#' @inheritParams window_params
+#' @return a new window as an external pointer
+#' @export
+#' @family window
+subwin <- function(win, nlines, ncols, y, x) {
+  .call('_subwin', win, as.integer(c(nlines, ncols, y, x)))
 }
 
 
