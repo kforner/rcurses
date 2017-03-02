@@ -42,4 +42,8 @@ test_that('example_attron', .example_attron())
 test_that('example_box', .example_box())
 
 
+.example_window <- function() {
+  expect_error(example_window(0.2), NA)
+}
+test_that('example_window', .example_window())
 

@@ -95,7 +95,9 @@ example_window <- function(sleep = 5) {
   .create_newwin <- function(...) {
     win <- newwin(...)
     box(win)
+    wrefresh(win)
 
+    win
   }
 
   on.exit(endwin())
@@ -104,11 +106,12 @@ example_window <- function(sleep = 5) {
   height <- 3
 	width <- 10
 	starty <-  (LINES() - height) / 2 # Calculating for a center placement
-	starty <- (COLS() - width) / 2;	#  of the window
+	startx <- (COLS() - width) / 2;	#  of the window
 
 	printw('Hello world !')
   refresh()
 
+  my_win <- .create_newwin(height, width, starty, startx)
 
   Sys.sleep(sleep)
   clear()
