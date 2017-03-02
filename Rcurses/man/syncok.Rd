@@ -2,7 +2,7 @@
 % Please edit documentation in R/windows.r
 \name{syncok}
 \alias{syncok}
-\title{seup automatic window wync}
+\title{setup automatic window wync}
 \usage{
 syncok(win, bf)
 }
@@ -16,7 +16,7 @@ there is a change in the window.}
 TRUE on success
 }
 \description{
-seup automatic window wync
+setup automatic window wync
 }
 \seealso{
 Other window: \code{\link{box}}, \code{\link{delwin}},

@@ -145,7 +145,7 @@ wsyncup <- function(win) {
   invisible()
 }
 
-#' seup automatic window wync
+#' setup automatic window wync
 #'
 #' @inheritParams window_params
 #' @param bf	if TRUE then wsyncup is called automatically whenever

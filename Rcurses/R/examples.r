@@ -84,6 +84,38 @@ example_box <- function(sleep = 5) {
 }
 
 
+#' window example
+#'
+#' inspired by http://tldp.org/HOWTO/NCURSES-Programming-HOWTO/windows.html
+#'
+#' @param sleep 	sleep time before exiting
+#' @export
+#' @family examples
+example_window <- function(sleep = 5) {
+  .create_newwin <- function(...) {
+    win <- newwin(...)
+    box(win)
+
+  }
+
+  on.exit(endwin())
+  initscr()
+
+  height <- 3
+	width <- 10
+	starty <-  (LINES() - height) / 2 # Calculating for a center placement
+	starty <- (COLS() - width) / 2;	#  of the window
+
+	printw('Hello world !')
+  refresh()
+
+
+  Sys.sleep(sleep)
+  clear()
+  refresh()
+}
+
+
 
 #' mvprintw example
 #'

@@ -16,6 +16,7 @@ hello world example
 Other examples: \code{\link{example_attributes}},
   \code{\link{example_attron}}, \code{\link{example_box}},
   \code{\link{example_getnstr}},
-  \code{\link{example_mvprintw}}
+  \code{\link{example_mvprintw}},
+  \code{\link{example_window}}
 }
 
