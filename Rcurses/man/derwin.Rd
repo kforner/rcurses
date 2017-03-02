@@ -27,7 +27,8 @@ begin_y and begin_x are relative to the origin of the win-
 }
 \seealso{
 Other window: \code{\link{box}}, \code{\link{delwin}},
-  \code{\link{mvwin}}, \code{\link{newwin}},
-  \code{\link{stdscr}}, \code{\link{subwin}}
+  \code{\link{dupwin}}, \code{\link{mvwin}},
+  \code{\link{newwin}}, \code{\link{stdscr}},
+  \code{\link{subwin}}
 }
 

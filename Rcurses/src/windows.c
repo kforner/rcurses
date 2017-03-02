@@ -65,6 +65,14 @@ SEXP _derwin(SEXP _win, SEXP _params) {
   return create_external_window(sub);
 }
 
+SEXP _dupwin(SEXP _win) {
+  if (!R_ExternalPtrAddr(_win)) return R_NilValue;
+
+  WINDOW* dup = dupwin((WINDOW*)R_ExternalPtrAddr(_win));
+  return create_external_window(dup);
+}
+
+
 SEXP _delwin(SEXP _win) {
   if (!R_ExternalPtrAddr(_win)) return R_NilValue;
 

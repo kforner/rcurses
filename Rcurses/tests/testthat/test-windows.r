@@ -49,6 +49,18 @@ test_that('subwin', .subwin())
 test_that('derwin', .derwin())
 
 
+.dupwin <- function() {
+  on.exit(endwin())
+  initscr()
+
+  win <- newwin()
+  dup <- dupwin(win)
+
+  delwin(dup)
+  delwin(win)
+}
+test_that('dupwin', .dupwin())
+
 
 .mvwin <- function() {
   win <- newwin()

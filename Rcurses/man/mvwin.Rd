@@ -24,7 +24,8 @@ If the move would cause the
 }
 \seealso{
 Other window: \code{\link{box}}, \code{\link{delwin}},
-  \code{\link{derwin}}, \code{\link{newwin}},
-  \code{\link{stdscr}}, \code{\link{subwin}}
+  \code{\link{derwin}}, \code{\link{dupwin}},
+  \code{\link{newwin}}, \code{\link{stdscr}},
+  \code{\link{subwin}}
 }
 

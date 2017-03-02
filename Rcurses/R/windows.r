@@ -77,6 +77,17 @@ derwin <- function(win, nlines, ncols, y, x) {
   .call('_derwin', win, as.integer(c(nlines, ncols, y, x)))
 }
 
+#' creates  an exact duplicate of a window
+#'
+#' @inheritParams window_params
+#' @return a new window as an external pointer
+#' @export
+#' @family window
+dupwin <- function(win) {
+  .call('_dupwin', win)
+}
+
+
 #' delete the window
 #'
 #' free all memory associated with it (it does not actually erase the win-
