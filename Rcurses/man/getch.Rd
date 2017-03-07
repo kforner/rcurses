@@ -6,10 +6,15 @@
 \usage{
 getch()
 }
+\value{
+the keycode
+}
 \description{
 wait for user input
 }
 \seealso{
+\code{\link{KEYS}}
+
 Other input: \code{\link{getnstr}}
 }
 

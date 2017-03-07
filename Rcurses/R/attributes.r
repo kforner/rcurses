@@ -2,7 +2,7 @@
 #'
 #'               A_NORMAL       Normal display (no highlight)
 #'               A_STANDOUT     Best highlighting mode of the terminal.
-#'              A_UNDERLINE    Underlining
+#'               A_UNDERLINE    Underlining
 #'               A_REVERSE      Reverse video
 #'               A_BLINK        Blinking
 #'               A_DIM          Half bright

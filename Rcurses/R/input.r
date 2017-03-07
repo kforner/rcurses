@@ -1,8 +1,13 @@
 #' wait for user input
 #'
+#' @return the keycode
 #' @export
 #' @family input
-getch <- function() .c('_getch')
+#' @seealso \code{\link{KEYS}}
+getch <- function() {
+  res <- .c('_getch', key = integer(1))
+  res$key
+}
 
 
 #' read character string from terminal from default window

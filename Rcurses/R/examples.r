@@ -63,6 +63,26 @@ example_hello <- function(sleep = 5) {
   refresh()
 }
 
+#' getch example
+#'
+#'
+#' @export
+#' @family examples
+example_getch <- function() {
+  on.exit(endwin())
+  initscr()
+	printw('Hit a key !')
+  refresh()
+  key <- getch()
+  printw(sprintf('You typed "%i"', key))
+  printw('Hit another key to exit')
+  refresh()
+
+  key <- getch()
+  clear()
+  refresh()
+}
+
 
 #' box example
 #'

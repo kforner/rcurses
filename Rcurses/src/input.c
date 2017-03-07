@@ -1,7 +1,9 @@
 #include <R.h>
 #include <ncurses.h>
 
-void _getch() { getch(); }
+void _getch(int *key) {
+  *key = getch();
+}
 
 // N.B: return the size of the read string in *n, or -1 on error
 void _getnstr(char ** str, int* n) {
