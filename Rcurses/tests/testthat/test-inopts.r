@@ -2,6 +2,8 @@ context('inopts')
 
 
 .inopts <- function() {
+  skip_if_not(interactive(), 'need interactive')
+
   with_initscr({
     expect_error(raw(), NA)
     expect_error(noraw(), NA)
@@ -34,6 +36,8 @@ test_that('inopts', .inopts())
 
 
 .halfdelay <- function() {
+  skip_if_not(interactive(), 'need interactive')
+
   with_initscr({
     expect_true(halfdelay(1))
     nocbreak()
