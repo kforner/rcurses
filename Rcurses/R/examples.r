@@ -73,6 +73,8 @@ example_getch <- function() {
   initscr()
 
   cbreak()
+  keypad()
+
 	printw('Hit a key !')
   refresh()
   key <- getch()
