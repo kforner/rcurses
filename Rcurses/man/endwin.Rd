@@ -14,6 +14,7 @@ This function must be called after you are done with the curses mode.
 \seealso{
 initscr
 
-Other init: \code{\link{initscr}}, \code{\link{raw}}
+Other init: \code{\link{initscr}},
+  \code{\link{with_initscr}}
 }
 

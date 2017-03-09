@@ -15,6 +15,7 @@ Other examples: \code{\link{example_attributes}},
   \code{\link{example_getnstr}},
   \code{\link{example_hello}},
   \code{\link{example_mvprintw}},
+  \code{\link{example_window_border}},
   \code{\link{example_window}}
 }
 

@@ -12,6 +12,7 @@ In some implementations, it clears the screen and presents a blank screen.
 \seealso{
 endwin
 
-Other init: \code{\link{endwin}}, \code{\link{raw}}
+Other init: \code{\link{endwin}},
+  \code{\link{with_initscr}}
 }
 

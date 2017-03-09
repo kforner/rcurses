@@ -9,19 +9,19 @@
 #' @family init
 initscr <- function() .c('_initscr')
 
-#' disable line buffering and signals by keystrokes
+
+#' evaluate some code inside an initialized screen
 #'
-#' Normally the terminal driver buffers the characters a user types
-#' until a new line or carriage return is encountered.
-#' This function disables this buffering.
-#'
-#' Control characters like suspend (CTRL-Z), interrupt and quit (CTRL-C)
-#' are directly passed to the program without generating a signal.
-#'
+#' @param code	the code to evaluate
 #' @export
-#' @seealso cbreak
 #' @family init
-raw <- function() .c('_raw')
+with_initscr <- function(code)
+{
+  initscr()
+  on.exit(endwin(), add = TRUE)
+  force(code)
+}
+
 
 #' end the curses mode
 #'
