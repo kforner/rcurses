@@ -8,8 +8,9 @@ keyname(code)
 }
 \arguments{
 \item{code}{an integer code describing a key}
-
-\item{the}{curses keyname for that key code}
+}
+\value{
+the curses keyname for that key code
 }
 \description{
 return the string corresponding to the key code

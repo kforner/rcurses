@@ -1,7 +1,7 @@
 #' return the string corresponding to the key code
 #'
 #' @param code	an integer code describing a key
-#' @param the curses keyname for that key code
+#' @return the curses keyname for that key code
 #' @export
 keyname <- function(code) {
   str <- paste0(rep(' ', 1000), collapse = '')
