@@ -74,7 +74,7 @@ noraw <- function() raw(FALSE)
 #' @seealso noecho
 #' @family inopts
 echo <- function(bf = TRUE) {
-  res <- .c('_raw', bf = as.integer(bf), status = integer(1))
+  res <- .c('_echo', bf = as.integer(bf), status = integer(1))
   if (res$status == 0) stop('error in raw')
 }
 

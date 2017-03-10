@@ -19,15 +19,6 @@ stdscr <- function() {
   .call('_stdscr')
 }
 
-#' draw a box around a window
-#'
-#' @inheritParams window_params
-#' @export
-#' @family window
-box <- function(win = stdscr()) {
-  .call('_box00', win)
-  invisible()
-}
 
 
 #' create a new window

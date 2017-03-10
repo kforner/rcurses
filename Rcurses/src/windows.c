@@ -5,10 +5,7 @@ SEXP _stdscr() {
 }
 
 
-SEXP _box00(SEXP _win) {
-  if (!R_ExternalPtrAddr(_win)) return R_NilValue;
-  box((WINDOW*)R_ExternalPtrAddr(_win), 0, 0);
-}
+
 
 SEXP _newwin(SEXP _params) {
   WINDOW* win = newwin(

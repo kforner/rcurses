@@ -74,16 +74,20 @@ example_getch <- function() {
 
   cbreak()
   keypad()
+  noecho()
 
-	printw('Hit a key !')
-  refresh()
-  key <- getch()
-  printw(sprintf('You typed "%i"', key))
+  key <- 0
+  repeat {
+    printw('Hit a key ! [ENTER to exit]\n')
+    refresh()
 
-  printw('Hit another key to exit')
-  refresh()
+    key <- getch()
+    if (key == KEYS[['^J']]) break;
 
-  key <- getch()
+    idx <- which(KEYS == key)
+    printw(sprintf('You typed "%s" == "%i"\n', names(KEYS)[idx], key))
+  }
+
   clear()
   refresh()
 }
@@ -125,6 +129,10 @@ example_window_border <- function() {
   }
 
   .destroy_win <- function(win) {
+
+    wborder(win)
+    #wborder(win, ' ', ' ', ' ',' ',' ',' ',' ',' ')
+    wrefresh(win)
     delwin(win)
   }
 
@@ -132,26 +140,31 @@ example_window_border <- function() {
   initscr()
 
   cbreak()
+  keypad()
+  noecho()
 
   height <- 3
 	width <- 10
 	starty <-  (LINES() - height) / 2 # Calculating for a center placement
 	startx <- (COLS() - width) / 2;	#  of the window
 
-	printw('Press ENTER to exit')
+	printw('Press ENTER to exit\n')
   refresh()
   my_win <- .create_newwin(height, width, starty, startx)
 
-  while( (ch <- getch()) != KEYS$ENTER) {
-    if (ch == KEYS$LEFT) startx <- startx - 1
-    if (ch == KEYS$RIGHT) startx <- startx + 1
-    if (ch == KEYS$UP) starty <- starty - 1
-    if (ch == KEYS$DOWN) starty <- starty + 1
+  repeat {
+    ch <- getch()
+    if (ch == KEYS[['^J']]) break;
 
-    .destroy_win(my_win);
-		my_win <-  .create_newwin(height, width, starty, startx)
-	}
+    if (ch == KEYS$KEY_LEFT) startx <- startx - 1
+    if (ch == KEYS$KEY_RIGHT) startx <- startx + 1
+    if (ch == KEYS$KEY_UP) starty <- starty - 1
+    if (ch == KEYS$KEY_DOWN) starty <- starty + 1
 
+    .destroy_win(my_win)
+    my_win <-  .create_newwin(height, width, starty, startx)
+
+  }
 
   clear()
   refresh()

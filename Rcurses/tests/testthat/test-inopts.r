@@ -1,8 +1,10 @@
 context('inopts')
 
+is_rcmd_check <- function() nzchar(Sys.getenv('R_TESTS'))
+
 
 .inopts <- function() {
-  skip_if_not(interactive(), 'need interactive')
+  skip_if_not(!is_rcmd_check(), 'not compatible with R CMD check')
 
   with_initscr({
     expect_error(raw(), NA)
@@ -36,7 +38,7 @@ test_that('inopts', .inopts())
 
 
 .halfdelay <- function() {
-  skip_if_not(interactive(), 'need interactive')
+  skip_if_not(!is_rcmd_check(), 'not compatible with R CMD check')
 
   with_initscr({
     expect_true(halfdelay(1))
