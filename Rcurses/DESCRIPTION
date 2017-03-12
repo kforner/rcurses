@@ -5,7 +5,8 @@ Authors@R: person("Karl", "Forner", email = "karl.forner@gmail.com", role =
     c("aut", "cre"))
 Description: Prototype of a R ncurses interface.
 Suggests:
-    testthat
+    testthat,
+    utils
 License: GPL (>= 3)
 LazyData: true
 RoxygenNote: 5.0.1
