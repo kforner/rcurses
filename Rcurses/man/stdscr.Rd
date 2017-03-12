@@ -13,10 +13,11 @@ a new window as an external pointer
 get the stdscr window as am external pointer
 }
 \seealso{
-Other window: \code{\link{box}}, \code{\link{delwin}},
-  \code{\link{derwin}}, \code{\link{dupwin}},
-  \code{\link{mvderwin}}, \code{\link{mvwin}},
-  \code{\link{newwin}}, \code{\link{subwin}},
-  \code{\link{syncok}}, \code{\link{wsyncup}}
+Other window: \code{\link{border}}, \code{\link{box}},
+  \code{\link{delwin}}, \code{\link{derwin}},
+  \code{\link{dupwin}}, \code{\link{mvderwin}},
+  \code{\link{mvwin}}, \code{\link{newwin}},
+  \code{\link{subwin}}, \code{\link{syncok}},
+  \code{\link{wsyncup}}
 }
 

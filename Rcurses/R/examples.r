@@ -130,8 +130,8 @@ example_window_border <- function() {
 
   .destroy_win <- function(win) {
 
-    wborder(win)
-    #wborder(win, ' ', ' ', ' ',' ',' ',' ',' ',' ')
+    #wborder(win)
+    border(win, ' ', ' ', ' ',' ',' ',' ',' ',' ')
     wrefresh(win)
     delwin(win)
   }

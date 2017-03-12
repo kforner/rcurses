@@ -5,7 +5,7 @@ SEXP _wborder(SEXP _win,
               SEXP tl, SEXP tr, SEXP bl, SEXP br)
 {
   if (!R_ExternalPtrAddr(_win)) return R_NilValue;
-/*
+
   wborder(
       (WINDOW*)R_ExternalPtrAddr(_win),
       INTEGER(ls)[0],
@@ -17,7 +17,7 @@ SEXP _wborder(SEXP _win,
       INTEGER(bl)[0],
       INTEGER(br)[0]
   );
-*/
+
   return R_NilValue;
 }
 
