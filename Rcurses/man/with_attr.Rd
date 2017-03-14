@@ -15,7 +15,8 @@ with_attr(code, ...)
 evaluate some code with the the given attributes on
 }
 \seealso{
-Other attributes: \code{\link{attributes}},
-  \code{\link{attroff}}, \code{\link{attron}}
+Other attributes: \code{\link{COLOR_PAIR}},
+  \code{\link{attributes}}, \code{\link{attroff}},
+  \code{\link{attron}}
 }
 

@@ -17,7 +17,7 @@ mvprintw example
 \seealso{
 Other examples: \code{\link{example_attributes}},
   \code{\link{example_attron}}, \code{\link{example_box}},
-  \code{\link{example_getch}},
+  \code{\link{example_color}}, \code{\link{example_getch}},
   \code{\link{example_getnstr}},
   \code{\link{example_hello}},
   \code{\link{example_window_border}},

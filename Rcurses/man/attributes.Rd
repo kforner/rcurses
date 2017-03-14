@@ -10,7 +10,8 @@ attributes()
 get the attributes values
 }
 \seealso{
-Other attributes: \code{\link{attroff}},
-  \code{\link{attron}}, \code{\link{with_attr}}
+Other attributes: \code{\link{COLOR_PAIR}},
+  \code{\link{attroff}}, \code{\link{attron}},
+  \code{\link{with_attr}}
 }
 

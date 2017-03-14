@@ -27,6 +27,32 @@ example_attributes <- function(sleep = 5) {
 }
 
 
+#' color example
+#'
+#'
+#' @param sleep 	sleep time before exiting
+#' @export
+#' @family examples
+example_color <- function(sleep = 5) {
+  on.exit(endwin())
+  initscr()
+
+  if (!has_colors()) stop('no color support!')
+
+  start_color()
+  init_pair(1, COLORS$RED, COLORS$BLACK)
+
+  color_on(COLOR_PAIR(1))
+  printw("I am in COLOR  !!!!")
+  color_off(COLOR_PAIR(1))
+
+  refresh()
+  Sys.sleep(sleep)
+  clear()
+  refresh()
+}
+
+
 #' attron example
 #'
 #'

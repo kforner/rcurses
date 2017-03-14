@@ -3,7 +3,7 @@
 // N.B: return the size of the read string in *n, or -1 on error
 void _cbreak(int* bf, int* status) {
   int code = (*bf) ? cbreak() : nocbreak();
-  *status = (cbreak() != ERR) ? 1 : 0;
+  code = (code != ERR);
 }
 
 void _raw(int* bf, int* status) {
