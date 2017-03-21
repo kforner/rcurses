@@ -4,6 +4,10 @@ void _has_colors(int* status) {
   *status = (has_colors() == TRUE);
 }
 
+void _can_change_color(int* status) {
+  *status = (can_change_color() == TRUE);
+}
+
 void _COLOR_BLACK(int* color) { *color = COLOR_BLACK; }
 void _COLOR_RED(int* color) { *color = COLOR_RED; }
 void _COLOR_GREEN(int* color) { *color = COLOR_GREEN; }

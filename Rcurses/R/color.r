@@ -1,10 +1,20 @@
-#' can the terminal manipulate colord
+#' can the terminal manipulate colors
 #'
 #' @return TRUE iff only it can
 #' @export
 #' @family color
 has_colors <- function() {
   res <- .c('_has_colors', status = integer(1))
+  as.logical(res$status)
+}
+
+#' does the  terminal  supports  colors and can change their definitions
+#'
+#' @return TRUE iff only it can
+#' @export
+#' @family color
+can_change_color <- function() {
+  res <- .c('_can_change_color', status = integer(1))
   as.logical(res$status)
 }
 
