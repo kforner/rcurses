@@ -2,7 +2,7 @@
 % Please edit documentation in R/color.r
 \name{has_colors}
 \alias{has_colors}
-\title{can the terminal manipulate colord}
+\title{can the terminal manipulate colors}
 \usage{
 has_colors()
 }
@@ -10,12 +10,12 @@ has_colors()
 TRUE iff only it can
 }
 \description{
-can the terminal manipulate colord
+can the terminal manipulate colors
 }
 \seealso{
 Other color: \code{\link{COLORS}},
-  \code{\link{COLOR_PAIR}}, \code{\link{color_off}},
-  \code{\link{color_on}}, \code{\link{init_pair}},
-  \code{\link{start_color}}
+  \code{\link{COLOR_PAIR}}, \code{\link{can_change_color}},
+  \code{\link{color_off}}, \code{\link{color_on}},
+  \code{\link{init_pair}}, \code{\link{start_color}}
 }
 
