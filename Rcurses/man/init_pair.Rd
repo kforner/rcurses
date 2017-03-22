@@ -9,7 +9,7 @@ init_pair(pair, b, f)
 \arguments{
 \item{pair}{the pair number}
 
-\item{b}{the backgroubd color number}
+\item{b}{the background color number}
 
 \item{f}{the foreground color number}
 }
