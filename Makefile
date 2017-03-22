@@ -11,3 +11,6 @@ check: roxy
 	
 test: roxy
 	Rscript -e 'devtools::test("$(PKG)")'
+
+clean:
+	rm -f src/*.o src/*.so man/*.Rd NAMESPACE
