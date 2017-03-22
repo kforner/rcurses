@@ -1,6 +1,8 @@
 context('colors')
 
 .has_colors <- function() {
+  on.exit(endwin())
+  initscr()
   expect_is(has_colors(), "logical")
 }
 test_that('has_colors', .has_colors())
