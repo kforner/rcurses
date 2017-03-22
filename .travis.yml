@@ -1,6 +1,8 @@
 language: r
 before_install: 
   - cd Rcurses
+env:
+  TERM=xterm-256color
 cache: packages
 pandoc: false
 addons:
