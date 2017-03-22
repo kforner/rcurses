@@ -14,3 +14,19 @@ test_that('has_colors', .has_colors())
 }
 test_that('COLORS', .COLORS())
 
+
+
+.color_content <- function() {
+  on.exit(endwin())
+  initscr()
+  skip_if_not(has_colors(), 'no color support')
+  start_color()
+
+  col <- color_content(COLORS$RED)
+
+  expect_gt(col$R, 10)
+  expect_equal(col$G, 0)
+  expect_equal(col$B, 0)
+
+}
+test_that('color_content', .color_content())

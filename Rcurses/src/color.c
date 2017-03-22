@@ -27,3 +27,14 @@ void _start_color(int* status) { *status = (start_color() != ERR); }
 void _color_pair(int* pair, int* vattr) {
   *vattr = COLOR_PAIR(*pair);
 }
+
+void _color_content(int* color, int* _r, int* _g, int* _b, int* _status) {
+  short r, g, b;
+
+  int code = color_content(*color, &r, &g, &b);
+
+  *_status = (code != ERR) ? 1 : 0;
+  *_r = r;
+  *_g = g;
+  *_b = b;
+}

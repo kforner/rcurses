@@ -45,6 +45,29 @@ COLOR_PAIR <- function(pair) {
 }
 
 
+#' get the RGB components of a color
+#'
+#' @param color		the color index
+#' @return the RGB as a named list (R=, G=, B=)
+#' @export
+#' @family color
+color_content <- function(color) {
+
+  res <- .c('_color_content',
+    as.integer(as.integer(color)),
+    R = integer(1),
+    G = integer(1),
+    B = integer(1),
+    status = integer(1))
+
+  if (!as.logical(res$status))
+    stop("Error in color_content()")
+
+  res[2:4]
+}
+
+
+
 #' changes the definition of a color pair.
 #'
 #' @param pair	the pair number

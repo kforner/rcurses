@@ -16,8 +16,9 @@ support for it (on terminology and gnome-terminal)
 }
 \seealso{
 Other color: \code{\link{COLORS}},
-  \code{\link{COLOR_PAIR}}, \code{\link{color_off}},
-  \code{\link{color_on}}, \code{\link{has_colors}},
-  \code{\link{init_pair}}, \code{\link{start_color}}
+  \code{\link{COLOR_PAIR}}, \code{\link{color_content}},
+  \code{\link{color_off}}, \code{\link{color_on}},
+  \code{\link{has_colors}}, \code{\link{init_pair}},
+  \code{\link{start_color}}
 }
 

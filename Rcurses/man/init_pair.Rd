@@ -19,7 +19,8 @@ changes the definition of a color pair.
 \seealso{
 Other color: \code{\link{COLORS}},
   \code{\link{COLOR_PAIR}}, \code{\link{can_change_color}},
-  \code{\link{color_off}}, \code{\link{color_on}},
-  \code{\link{has_colors}}, \code{\link{start_color}}
+  \code{\link{color_content}}, \code{\link{color_off}},
+  \code{\link{color_on}}, \code{\link{has_colors}},
+  \code{\link{start_color}}
 }
 
