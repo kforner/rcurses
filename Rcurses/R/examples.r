@@ -40,11 +40,11 @@ example_color <- function(sleep = 5) {
   if (!has_colors()) stop('no color support!')
 
   start_color()
-  init_pair(1, COLORS$RED, COLORS$BLACK)
+  init_pair(2, COLORS$RED, COLORS$BLACK)
 
-  color_on(1)
+  color_on(2)
   printw("I am in COLOR  !!!!")
-  color_off(1)
+  color_off(2)
 
   refresh()
   Sys.sleep(sleep)
