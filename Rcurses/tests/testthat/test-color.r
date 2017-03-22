@@ -30,3 +30,18 @@ test_that('COLORS', .COLORS())
 
 }
 test_that('color_content', .color_content())
+
+
+.pair_content <- function() {
+  on.exit(endwin())
+  initscr()
+  skip_if_not(has_colors(), 'no color support')
+  start_color()
+
+  init_pair(2, COLORS$RED, COLORS$BLACK)
+
+  cols <- pair_content(2)
+  expect_equal(cols$F, COLORS$RED)
+  expect_equal(cols$B, COLORS$BLACK)
+}
+test_that('pair_content', .pair_content())

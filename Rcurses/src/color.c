@@ -38,3 +38,14 @@ void _color_content(int* color, int* _r, int* _g, int* _b, int* _status) {
   *_g = g;
   *_b = b;
 }
+
+
+void _pair_content(int* pair, int* _f, int* _b, int* _status) {
+  short f, b;
+
+  int code = pair_content(*pair, &f, &b);
+
+  *_status = (code != ERR) ? 1 : 0;
+  *_f = f;
+  *_b = b;
+}

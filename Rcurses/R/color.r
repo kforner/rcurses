@@ -67,6 +67,27 @@ color_content <- function(color) {
 }
 
 
+#' find out what colors  a given color-pair consists of
+#'
+#' @param pair	the pair number
+#' @return the colors (foreground, background) as a named list (F, B)
+#' @export
+#' @family color
+pair_content <- function(pair) {
+
+  res <- .c('_pair_content',
+    as.integer(as.integer(pair)),
+    F = integer(1),
+    B = integer(1),
+    status = integer(1))
+
+  if (!as.logical(res$status))
+    stop("Error in color_content()")
+
+  res[2:3]
+}
+
+
 
 #' changes the definition of a color pair.
 #'
