@@ -10,7 +10,9 @@ can_change_color()
 TRUE iff only it can
 }
 \description{
-does the  terminal  supports  colors and can change their definitions
+Lots of terminals do not support it.
+Setting TERM=xterm-256color in terminology on ubuntu seem to enable
+support for it (on terminology and gnome-terminal)
 }
 \seealso{
 Other color: \code{\link{COLORS}},
