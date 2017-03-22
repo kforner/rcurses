@@ -17,7 +17,8 @@ Other attributes: \code{\link{attributes}},
   \code{\link{attroff}}, \code{\link{attron}},
   \code{\link{with_attr}}
 
-Other color: \code{\link{COLORS}}, \code{\link{color_off}},
+Other color: \code{\link{COLORS}},
+  \code{\link{can_change_color}}, \code{\link{color_off}},
   \code{\link{color_on}}, \code{\link{has_colors}},
   \code{\link{init_pair}}, \code{\link{start_color}}
 }

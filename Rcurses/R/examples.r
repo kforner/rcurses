@@ -42,9 +42,34 @@ example_color <- function(sleep = 5) {
   start_color()
   init_pair(1, COLORS$RED, COLORS$BLACK)
 
-  color_on(COLOR_PAIR(1))
+  color_on(1)
   printw("I am in COLOR  !!!!")
-  color_off(COLOR_PAIR(1))
+  color_off(1)
+
+  refresh()
+  Sys.sleep(sleep)
+  clear()
+  refresh()
+}
+
+#' change color example
+#'
+#'
+#' @param sleep 	sleep time before exiting
+#' @export
+#' @family examples
+example_change_color <- function(sleep = 5) {
+  on.exit(endwin())
+  initscr()
+
+  if (!can_change_color()) stop('can not change colors!')
+
+  start_color()
+  init_pair(1, COLORS$RED, COLORS$BLACK)
+
+  color_on(1)
+  printw("I am in COLOR  !!!!")
+  color_off(1)
 
   refresh()
   Sys.sleep(sleep)
