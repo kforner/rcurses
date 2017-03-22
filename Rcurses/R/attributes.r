@@ -70,9 +70,7 @@ with_attr <- function(code, ...)
 #' @export
 #' @family attributes
 attron <- function(...) {
-  dots <- as.character(list(...))
-  attrs <- as.integer(dots)
-
+  attrs <- as.integer(list(...))
   .c('_attron', attrs, as.integer(length(attrs)))
 }
 
@@ -82,9 +80,7 @@ attron <- function(...) {
 #' @export
 #' @family attributes
 attroff <- function(...) {
-  dots <- as.character(list(...))
-  attrs <- as.integer(dots)
-
+  attrs <- as.integer(list(...))
   .c('_attroff', attrs, as.integer(length(attrs)))
 }
 
