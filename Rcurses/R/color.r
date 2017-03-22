@@ -76,7 +76,7 @@ color_content <- function(color) {
 pair_content <- function(pair) {
 
   res <- .c('_pair_content',
-    as.integer(as.integer(pair)),
+    as.integer(pair),
     F = integer(1),
     B = integer(1),
     status = integer(1))
@@ -87,6 +87,23 @@ pair_content <- function(pair) {
   res[2:3]
 }
 
+
+#' extracts the color value for a video attribute
+#'
+#' inverse of \link{\code{COLOR_PAIR}}
+#'
+#' @param vattr		a video attribute
+#' @return the pair number
+#' @export
+#' @family color
+PAIR_NUMBER <- function(vattr) {
+
+  res <- .c('_pair_number',
+    as.integer(vattr),
+    pair = integer(1))
+
+  res$pair
+}
 
 
 #' changes the definition of a color pair.

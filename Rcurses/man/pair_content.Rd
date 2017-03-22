@@ -17,7 +17,8 @@ find out what colors  a given color-pair consists of
 }
 \seealso{
 Other color: \code{\link{COLORS}},
-  \code{\link{COLOR_PAIR}}, \code{\link{can_change_color}},
+  \code{\link{COLOR_PAIR}}, \code{\link{PAIR_NUMBER}},
+  \code{\link{can_change_color}},
   \code{\link{color_content}}, \code{\link{color_off}},
   \code{\link{color_on}}, \code{\link{has_colors}},
   \code{\link{init_pair}}, \code{\link{start_color}}

@@ -28,6 +28,11 @@ void _color_pair(int* pair, int* vattr) {
   *vattr = COLOR_PAIR(*pair);
 }
 
+void _pair_number(int* vattr, int* _pair) {
+  *_pair = PAIR_NUMBER(*vattr);
+}
+
+
 void _color_content(int* color, int* _r, int* _g, int* _b, int* _status) {
   short r, g, b;
 
