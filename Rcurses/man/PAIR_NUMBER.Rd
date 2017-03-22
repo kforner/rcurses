@@ -13,7 +13,7 @@ PAIR_NUMBER(vattr)
 the pair number
 }
 \description{
-inverse of \link{\code{COLOR_PAIR}}
+inverse of \code{\link{COLOR_PAIR}}
 }
 \seealso{
 Other color: \code{\link{COLORS}},

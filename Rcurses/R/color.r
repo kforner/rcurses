@@ -90,7 +90,7 @@ pair_content <- function(pair) {
 
 #' extracts the color value for a video attribute
 #'
-#' inverse of \link{\code{COLOR_PAIR}}
+#' inverse of \code{\link{COLOR_PAIR}}
 #'
 #' @param vattr		a video attribute
 #' @return the pair number
