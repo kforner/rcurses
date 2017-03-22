@@ -64,8 +64,7 @@ init_pair <- function(pair, b, f) {
 #' @export
 #' @family color
 color_on <- function(pair) {
-  attrs <- COLOR_PAIR(pair)
-  .c('_attron', attrs, as.integer(length(attrs)))
+  attron(COLOR_PAIR(pair))
 }
 
 #' unset the current color
@@ -75,8 +74,7 @@ color_on <- function(pair) {
 #' @export
 #' @family color
 color_off <- function(pair) {
-  attrs <- COLOR_PAIR(pair)
-  .c('_attroff', attrs, as.integer(length(attrs)))
+  attroff(COLOR_PAIR(pair))
 }
 
 #' Color constants
