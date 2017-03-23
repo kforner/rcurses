@@ -181,3 +181,18 @@ assume_default_colors <- function(b, f) {
     stop("Error in assume_default_colors(), terminal does not support it")
   invisible()
 }
+
+#' assign terminal default foreground/background colors to color number  -1.
+#'
+#' die if the terminal does not support this extension
+#'
+#' @export
+#' @family color
+use_default_colors <- function() {
+  res <- .c('_use_default_colors', status = integer(1))
+  if (!as.logical(res$status))
+    stop("Error in use_default_colors(), terminal does not support it")
+  invisible()
+}
+
+

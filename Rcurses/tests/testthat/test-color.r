@@ -73,3 +73,16 @@ test_that('pair_content', .pair_content())
   expect_error(assume_default_colors(-1,-1), NA)
 }
 test_that('assume_default_color', .assume_default_color())
+
+
+
+.use_default_colors <- function() {
+  on.exit(endwin())
+  initscr()
+  skip_if_not(has_colors(), 'no color support')
+  start_color()
+
+  expect_error(use_default_colors(), NA)
+}
+test_that('use_default_colors', .use_default_colors())
+

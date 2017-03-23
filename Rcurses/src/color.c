@@ -61,3 +61,9 @@ void _assume_default_colors(int* f, int* b, int* _status) {
    *_status = (code != ERR) ? 1 : 0;
 }
 
+void _use_default_colors(int* _status) {
+  int code = use_default_colors();
+   *_status = (code != ERR) ? 1 : 0;
+}
+
+
