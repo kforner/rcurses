@@ -2,6 +2,7 @@
 #'
 #' may die if the position is outside the window
 #'
+#' @inheritParams window_params
 #' @param y			the y position (aka the row)
 #' @param x			the x position (aka the column)
 #' @export

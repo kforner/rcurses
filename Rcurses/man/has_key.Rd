@@ -6,6 +6,9 @@
 \usage{
 has_key(ch)
 }
+\arguments{
+\item{ch}{the key code}
+}
 \value{
 TRUE iff the terminal recognizes ch
 }
@@ -15,6 +18,6 @@ tells if the terminal recognizes a key
 \seealso{
 \code{\link{KEYS}}
 
-Other getch: \code{\link{getch}}, \code{\link{mvwgetch}}
+Other getch: \code{\link{getch}}
 }
 

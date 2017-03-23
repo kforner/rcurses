@@ -10,6 +10,8 @@ move(y, x, win = stdscr())
 \item{y}{the y position (aka the row)}
 
 \item{x}{the x position (aka the column)}
+
+\item{win}{a window object as an external pointer}
 }
 \description{
 may die if the position is outside the window

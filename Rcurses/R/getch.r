@@ -12,6 +12,7 @@ getch <- function() {
 
 #' tells if the terminal recognizes a key
 #'
+#' @param ch	the key code
 #' @return TRUE iff the terminal recognizes ch
 #' @export
 #' @family getch
@@ -22,13 +23,13 @@ has_key <- function(ch) {
 }
 
 
-#' wait for user input
-#'
-#' @return the keycode
-#' @export
-#' @family getch
-#' @seealso \code{\link{KEYS}}
-mvwgetch <- function(win, y, x) {
-  res <- .c('_getch', key = integer(1))
-  res$key
-}
+##' wait for user input
+##'
+##' @return the keycode
+##' @export
+##' @family getch
+##' @seealso \code{\link{KEYS}}
+#mvwgetch <- function(win, y, x) {
+#  res <- .c('_getch', key = integer(1))
+#  res$key
+#}
