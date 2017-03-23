@@ -6,12 +6,25 @@
 #' @param x			the x position (aka the column)
 #' @export
 #' @family cursor
-move <- function(y, x) {
-  res <- .c('_move', as.integer(y), as.integer(x), status = 0L)
+move <- function(y, x, win = stdscr()) {
+  wmove(win, y, x)
+}
 
-  if (res$status == 0)
-    stop('error in move, probably a position outside the window')
-  invisible()
+#' perform a cursor movement in a window
+#'
+#' may die if the position is outside the window
+#'
+#' @inheritParams window_params
+#' @param y			the y position (aka the row)
+#' @param x			the x position (aka the column)
+#'
+#' @return TRUE iff the cursor has been moved
+#' @export
+#' @family cursor
+wmove <- function(win, y, x) {
+  res <- .call('_wmove', win, as.integer(y), as.integer(x))
+  invisible(as.logical(res))
+
 }
 
 #' get the cursor position

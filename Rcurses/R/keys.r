@@ -1,5 +1,7 @@
 #' return the string corresponding to the key code
 #'
+#' N.B: requires \code{\link{keypad}}
+#'
 #' @param code	an integer code describing a key
 #' @return the curses keyname for that key code
 #' @export

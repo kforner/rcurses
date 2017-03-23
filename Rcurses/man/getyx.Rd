@@ -13,6 +13,6 @@ a list (y, x)
 get the cursor position
 }
 \seealso{
-Other cursor: \code{\link{move}}
+Other cursor: \code{\link{move}}, \code{\link{wmove}}
 }
 

@@ -13,6 +13,6 @@ keyname(code)
 the curses keyname for that key code
 }
 \description{
-return the string corresponding to the key code
+N.B: requires \code{\link{keypad}}
 }
 

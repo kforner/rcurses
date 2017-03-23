@@ -15,7 +15,4 @@ the read string
 \description{
 read character string from terminal from default window
 }
-\seealso{
-Other input: \code{\link{getch}}
-}
 
