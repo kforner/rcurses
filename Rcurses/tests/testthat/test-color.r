@@ -61,3 +61,15 @@ test_that('pair_content', .pair_content())
   expect_equal(pair, 1)
 }
 test_that('pair_content', .pair_content())
+
+
+
+.assume_default_color <- function() {
+  on.exit(endwin())
+  initscr()
+  skip_if_not(has_colors(), 'no color support')
+  start_color()
+
+  expect_error(assume_default_colors(-1,-1), NA)
+}
+test_that('assume_default_color', .assume_default_color())

@@ -54,3 +54,10 @@ void _pair_content(int* pair, int* _f, int* _b, int* _status) {
   *_f = f;
   *_b = b;
 }
+
+
+void _assume_default_colors(int* f, int* b, int* _status) {
+  int code = assume_default_colors(*f, *b);
+   *_status = (code != ERR) ? 1 : 0;
+}
+

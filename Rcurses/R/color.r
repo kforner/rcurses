@@ -163,3 +163,21 @@ assign_colors <- function() {
 
   cols
 }
+
+
+#' tells which colors to paint for color pair 0
+#'
+#' @param f		the foreground color number. -1 means the default terminal color
+#' @param b		the background color number. -1 means the default terminal color
+#'
+#' die if the terminal does not support this extension
+#'
+#' @export
+#' @family color
+assume_default_colors <- function(b, f) {
+  res <- .c('_assume_default_colors', as.integer(b), as.integer(f),
+    status = integer(1))
+  if (!as.logical(res$status))
+    stop("Error in assume_default_colors(), terminal does not support it")
+  invisible()
+}
