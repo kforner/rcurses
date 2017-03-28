@@ -15,6 +15,7 @@ wait for user input
 \seealso{
 \code{\link{KEYS}}
 
-Other getch: \code{\link{has_key}}, \code{\link{wgetch}}
+Other getch: \code{\link{has_key}}, \code{\link{mvgetch}},
+  \code{\link{mvwgetch}}, \code{\link{wgetch}}
 }
 

@@ -5,9 +5,22 @@
 #' @family getch
 #' @seealso \code{\link{KEYS}}
 getch <- function() {
-  res <- .c('_getch', key = integer(1))
-  res$key
+  wgetch(stdscr())
 }
+
+#' move and wait for user input
+#'
+#' @inheritParams move
+#' @return the keycode, or <= 0 on error or timeout
+#' @export
+#' @family getch
+#' @seealso \code{\link{KEYS}}
+mvgetch <- function(y, x) {
+  move(y,x)
+  getch()
+}
+
+
 
 
 #' tells if the terminal recognizes a key
@@ -22,6 +35,19 @@ has_key <- function(ch) {
   as.logical(res$out)
 }
 
+
+#' move and wait for user input in window
+#'
+#' @inheritParams window_params
+#' @inheritParams move
+#' @return the keycode, or <= 0 on error or timeout
+#' @export
+#' @family getch
+#' @seealso \code{\link{KEYS}}
+mvwgetch <- function(win, y, x) {
+  move(y, x)
+  wgetch(win)
+}
 
 #' wait for user input
 #'
