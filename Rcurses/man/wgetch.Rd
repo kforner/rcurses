@@ -10,7 +10,7 @@ wgetch(win)
 \item{win}{a window object as an external pointer}
 }
 \value{
-the keycode
+the keycode, or <= 0 on error or timeout
 }
 \description{
 wait for user input
