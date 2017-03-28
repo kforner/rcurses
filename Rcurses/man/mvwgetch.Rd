@@ -23,6 +23,7 @@ move and wait for user input in window
 \code{\link{KEYS}}
 
 Other getch: \code{\link{getch}}, \code{\link{has_key}},
-  \code{\link{mvgetch}}, \code{\link{wgetch}}
+  \code{\link{mvgetch}}, \code{\link{ungetch}},
+  \code{\link{wgetch}}
 }
 

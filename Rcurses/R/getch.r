@@ -8,6 +8,22 @@ getch <- function() {
   wgetch(stdscr())
 }
 
+
+#' wait for user input
+#'
+#' die if there is no more room in the FIFO
+#'
+#' @inheritParams has_key
+#' @export
+#' @family getch
+#' @seealso \code{\link{KEYS}}
+ungetch <- function(ch) {
+  res <- .c('_ungetch', as.integer(ch), status = integer(1))
+  if (!as.logical(res$status))
+    stop("Error in ungetch(), probably no more room in the FIFO")
+  invisible()
+}
+
 #' move and wait for user input
 #'
 #' @inheritParams move

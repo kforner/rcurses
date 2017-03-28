@@ -19,6 +19,7 @@ tells if the terminal recognizes a key
 \code{\link{KEYS}}
 
 Other getch: \code{\link{getch}}, \code{\link{mvgetch}},
-  \code{\link{mvwgetch}}, \code{\link{wgetch}}
+  \code{\link{mvwgetch}}, \code{\link{ungetch}},
+  \code{\link{wgetch}}
 }
 

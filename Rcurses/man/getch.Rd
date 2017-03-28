@@ -16,6 +16,7 @@ wait for user input
 \code{\link{KEYS}}
 
 Other getch: \code{\link{has_key}}, \code{\link{mvgetch}},
-  \code{\link{mvwgetch}}, \code{\link{wgetch}}
+  \code{\link{mvwgetch}}, \code{\link{ungetch}},
+  \code{\link{wgetch}}
 }
 

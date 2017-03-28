@@ -9,14 +9,33 @@ test_that('has_key', .has_key())
 
 
 
-.getch_all <- function() {
+.ungetch <- function() {
   on.exit(endwin())
   keypad()
   halfdelay(1) # quick timeout
-  expect_lt(getch(), 0)
-  expect_lt(wgetch(stdscr()), 0)
-  expect_lt(mvgetch(0, 0), 0)
-  expect_lt(mvwgetch(stdscr(), 0, 0), 0)
+
+  ungetch(KEYS$KEY_ENTER)
+  expect_equal(getch(), KEYS$KEY_ENTER)
+}
+test_that('ungetch', .ungetch())
+
+
+
+.getch_all <- function() {
+  on.exit(endwin())
+  keypad()
+
+  ungetch(32)
+  expect_equal(getch(), 32)
+
+  ungetch(32)
+  expect_equal(wgetch(stdscr()), 32)
+
+  ungetch(32)
+  expect_equal(mvgetch(0, 0), 32)
+
+  ungetch(32)
+  expect_equal(mvwgetch(stdscr(), 0, 0), 32)
 }
 test_that('getch_all', .getch_all())
 
@@ -25,7 +44,8 @@ test_that('getch_all', .getch_all())
 .wgetch <- function() {
   on.exit(endwin())
   keypad()
-  halfdelay(1) # quick timeout
-  expect_lt(wgetch(stdscr()), 0)
+
+  ungetch(32)
+  expect_equal(wgetch(stdscr()), 32)
 }
 test_that('wgetch', .wgetch())
