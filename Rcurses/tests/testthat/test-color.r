@@ -8,11 +8,11 @@ context('colors')
 test_that('has_colors', .has_colors())
 
 
-.COLORS <- function() {
-  expect_is(COLORS, 'list')
-  expect_is(COLORS$BLACK, 'integer')
+.COLOR <- function() {
+  expect_is(COLOR, 'list')
+  expect_is(COLOR$BLACK, 'integer')
 }
-test_that('COLORS', .COLORS())
+test_that('COLOR', .COLOR())
 
 
 
@@ -22,7 +22,7 @@ test_that('COLORS', .COLORS())
   skip_if_not(has_colors(), 'no color support')
   start_color()
 
-  col <- color_content(COLORS$RED)
+  col <- color_content(COLOR$RED)
 
   expect_gt(col$R, 10)
   expect_equal(col$G, 0)
@@ -39,11 +39,11 @@ test_that('color_content', .color_content())
   skip_if_not(has_colors(), 'no color support')
   start_color()
 
-  init_pair(2, COLORS$RED, COLORS$BLACK)
+  init_pair(2, COLOR$RED, COLOR$BLACK)
 
   cols <- pair_content(2)
-  expect_equal(cols$F, COLORS$RED)
-  expect_equal(cols$B, COLORS$BLACK)
+  expect_equal(cols$F, COLOR$RED)
+  expect_equal(cols$B, COLOR$BLACK)
 }
 test_that('pair_content', .pair_content())
 

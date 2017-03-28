@@ -40,7 +40,7 @@ example_color <- function(sleep = 5) {
   if (!has_colors()) stop('no color support!')
 
   start_color()
-  init_pair(2, COLORS$RED, COLORS$BLACK)
+  init_pair(2, COLOR$RED, COLOR$BLACK)
 
   color_on(2)
   printw("I am in COLOR  !!!!")
@@ -65,7 +65,7 @@ example_change_color <- function(sleep = 5) {
   if (!can_change_color()) stop('can not change colors!')
 
   start_color()
-  init_pair(1, COLORS$RED, COLORS$BLACK)
+  init_pair(1, COLOR$RED, COLOR$BLACK)
 
   color_on(1)
   printw("I am in COLOR  !!!!")

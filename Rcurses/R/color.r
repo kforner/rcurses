@@ -146,10 +146,10 @@ color_off <- function(pair) {
 #'
 #' @seealso keyname
 #' @export
-#' @name COLORS
+#' @name COLOR
 #' @family color
 NULL
-delayedAssign('COLORS', assign_colors())
+delayedAssign('COLOR', assign_colors())
 
 assign_colors <- function() {
   cnames <- c("COLOR_BLACK", "COLOR_RED", "COLOR_GREEN", "COLOR_YELLOW",
