@@ -18,6 +18,6 @@ tells if the terminal recognizes a key
 \seealso{
 \code{\link{KEYS}}
 
-Other getch: \code{\link{getch}}
+Other getch: \code{\link{getch}}, \code{\link{wgetch}}
 }
 

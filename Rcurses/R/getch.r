@@ -1,6 +1,6 @@
 #' wait for user input
 #'
-#' @return the keycode
+#' @return the keycode, or <= 0 on error or timeout
 #' @export
 #' @family getch
 #' @seealso \code{\link{KEYS}}
@@ -23,13 +23,14 @@ has_key <- function(ch) {
 }
 
 
-##' wait for user input
-##'
-##' @return the keycode
-##' @export
-##' @family getch
-##' @seealso \code{\link{KEYS}}
-#mvwgetch <- function(win, y, x) {
-#  res <- .c('_getch', key = integer(1))
-#  res$key
-#}
+#' wait for user input
+#'
+#' @inheritParams window_params
+#' @return the keycode
+#' @export
+#' @family getch
+#' @seealso \code{\link{KEYS}}
+wgetch <- function(win) {
+  res <- .c('_getch', key = integer(1))
+  res$key
+}
