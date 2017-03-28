@@ -43,8 +43,8 @@ test_that('attron', .attron())
 
 
 
-.attributes <- function() {
-  attrs <- attributes()
+.ncurses_attributes <- function() {
+  attrs <- ncurses_attributes()
   expect_length(attrs, 11)
 
   expect_is(attrs, 'integer')
@@ -52,5 +52,5 @@ test_that('attron', .attron())
   expect_true('A_NORMAL' %in% names(attrs))
   expect_equal(attrs[['A_NORMAL']], 0)
 }
-test_that('attributes', .attributes())
+test_that('ncurses_attributes', .ncurses_attributes())
 

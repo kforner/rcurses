@@ -21,7 +21,7 @@ ATTRIBUTE_NAMES <- c("A_NORMAL", "A_STANDOUT", "A_UNDERLINE", "A_REVERSE", "A_BL
 
 # use lapply because it fixes the problem of referencing symbols in loops
 invisible(lapply(ATTRIBUTE_NAMES, function(x) {
-  delayedAssign(x, attributes()[x], assign.env = parent.frame(2))
+  delayedAssign(x, ncurses_attributes()[x], assign.env = parent.frame(2))
 }))
 
 
@@ -30,7 +30,7 @@ invisible(lapply(ATTRIBUTE_NAMES, function(x) {
 #'
 #' @export
 #' @family attributes
-attributes <- function() {
+ncurses_attributes <- function() {
   attrs <- integer(11)
   res <- .c('_attributes', attrs = attrs)
 
