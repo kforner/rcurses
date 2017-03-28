@@ -14,7 +14,7 @@ turns off the given attributes without affecting any others.
 }
 \seealso{
 Other attributes: \code{\link{COLOR_PAIR}},
-  \code{\link{attributes}}, \code{\link{attron}},
+  \code{\link{attron}}, \code{\link{ncurses_attributes}},
   \code{\link{with_attr}}
 }
 

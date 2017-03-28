@@ -16,7 +16,7 @@ evaluate some code with the the given attributes on
 }
 \seealso{
 Other attributes: \code{\link{COLOR_PAIR}},
-  \code{\link{attributes}}, \code{\link{attroff}},
-  \code{\link{attron}}
+  \code{\link{attroff}}, \code{\link{attron}},
+  \code{\link{ncurses_attributes}}
 }
 

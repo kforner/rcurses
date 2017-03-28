@@ -10,14 +10,7 @@
 #' @keywords internal
 NULL
 
-#' get the stdscr window as am external pointer
-#'
-#' @return a new window as an external pointer
-#' @export
-#' @family window
-stdscr <- function() {
-  .call('_stdscr')
-}
+
 
 
 

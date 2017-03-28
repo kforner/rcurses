@@ -26,8 +26,7 @@ If the move would cause the
 Other window: \code{\link{border}}, \code{\link{box}},
   \code{\link{delwin}}, \code{\link{derwin}},
   \code{\link{dupwin}}, \code{\link{mvderwin}},
-  \code{\link{newwin}}, \code{\link{stdscr}},
-  \code{\link{subwin}}, \code{\link{syncok}},
-  \code{\link{wsyncup}}
+  \code{\link{newwin}}, \code{\link{subwin}},
+  \code{\link{syncok}}, \code{\link{wsyncup}}
 }
 

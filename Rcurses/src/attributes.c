@@ -1,5 +1,4 @@
-#include <R.h>
-#include <ncurses.h>
+#include "rcurses.h"
 
 // return the attribute values in predefined order (except COLOR_PAIR(n))
 // attrs must be preallocated of at least 11 elements

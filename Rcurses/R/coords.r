@@ -12,24 +12,3 @@ getmaxyx <- function(win = stdscr()) {
   as.list(coords)
 }
 
-#' the  width of the screen in characters.
-#'
-#' @return the number of columns
-#' @export
-#' @family coords
-COLS <- function() {
-  res <- .c('_COLS', col = integer(1))
-
-  res$col
-}
-
-#' the  height of the screen in characters.
-#'
-#' @return the number of lines
-#' @export
-#' @family coords
-LINES <- function() {
-  res <- .c('_LINES', lines = integer(1))
-
-  res$lines
-}

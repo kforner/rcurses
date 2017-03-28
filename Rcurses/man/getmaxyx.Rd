@@ -15,7 +15,4 @@ a named list of y, x (or #rows, #cols)
 \description{
 get the current beginning coordinates and size of the default window.
 }
-\seealso{
-Other coords: \code{\link{COLS}}, \code{\link{LINES}}
-}
 

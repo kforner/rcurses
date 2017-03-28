@@ -1,8 +1,5 @@
 #include "rcurses.h"
 
-SEXP _stdscr() {
-  return create_external_window(stdscr);
-}
 
 
 

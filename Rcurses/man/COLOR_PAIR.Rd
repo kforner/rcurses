@@ -13,11 +13,11 @@ COLOR_PAIR(pair)
 convert the pair to a video attribute
 }
 \seealso{
-Other attributes: \code{\link{attributes}},
-  \code{\link{attroff}}, \code{\link{attron}},
+Other attributes: \code{\link{attroff}},
+  \code{\link{attron}}, \code{\link{ncurses_attributes}},
   \code{\link{with_attr}}
 
-Other color: \code{\link{COLORS}},
+Other color: \code{\link{COLOR}},
   \code{\link{PAIR_NUMBER}},
   \code{\link{assume_default_colors}},
   \code{\link{can_change_color}},

@@ -16,8 +16,8 @@ the RGB as a named list (R=, G=, B=)
 get the RGB components of a color
 }
 \seealso{
-Other color: \code{\link{COLORS}},
-  \code{\link{COLOR_PAIR}}, \code{\link{PAIR_NUMBER}},
+Other color: \code{\link{COLOR_PAIR}}, \code{\link{COLOR}},
+  \code{\link{PAIR_NUMBER}},
   \code{\link{assume_default_colors}},
   \code{\link{can_change_color}}, \code{\link{color_off}},
   \code{\link{color_on}}, \code{\link{has_colors}},

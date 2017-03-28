@@ -30,8 +30,7 @@ If either nlines or ncols is zero, they default to
 Other window: \code{\link{border}}, \code{\link{box}},
   \code{\link{delwin}}, \code{\link{derwin}},
   \code{\link{dupwin}}, \code{\link{mvderwin}},
-  \code{\link{mvwin}}, \code{\link{stdscr}},
-  \code{\link{subwin}}, \code{\link{syncok}},
-  \code{\link{wsyncup}}
+  \code{\link{mvwin}}, \code{\link{subwin}},
+  \code{\link{syncok}}, \code{\link{wsyncup}}
 }
 
