@@ -42,3 +42,8 @@ void _mouse_events(int *events) {
       events[i] = MOUSE_EVENTS[i];
 
 }
+
+
+void _has_mouse(int *_out) {
+  *_out = ((has_mouse() == TRUE) ? 1 : 0);
+}

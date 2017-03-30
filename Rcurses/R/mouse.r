@@ -36,10 +36,20 @@ MOUSE_EVENT_NAMES <- c('BUTTON1_PRESSED',
 'ALL_MOUSE_EVENTS',
 'REPORT_MOUSE_POSITION')
 
+
+#' Mouse constants
+#'
+#' @seealso mouse_events
+#' @export
+#' @name MOUSE
+NULL
+delayedAssign('MOUSE', mouse_events())
+
 #' fetch the mouse events values
 #'
 #' @export
 #' @family mouse
+#' @export
 mouse_events <- function() {
   nb <- nb_mouse_events()
   if (nb != length(MOUSE_EVENT_NAMES))
@@ -49,5 +59,17 @@ mouse_events <- function() {
 
   names(res$events) <- MOUSE_EVENT_NAMES
 
-  res$events
+  as.list(res$events)
+}
+
+
+#' test if the mouse driver has been successfully initialized.
+#'
+#' @return TRUE iff mouse support is initialized
+#' @export
+#' @family mouse
+#' @export
+has_mouse <- function() {
+  res <- .c('_has_mouse', out = integer(1))
+  as.logical(res$out)
 }
