@@ -310,3 +310,40 @@ example_getnstr <- function(sleep = 5, msg = 'Just a string') {
 
 }
 # nocov end
+
+
+#' mouse example
+#'
+#' @export
+#' @family examples
+# nocov start
+example_mouse <- function(sleep = 5) {
+  on.exit(endwin())
+  initscr()
+
+  clear()
+	noecho()
+	cbreak()
+
+  mask <- mousemask(MOUSE$ALL_MOUSE_EVENTS);
+  printw(sprintf("effective mask:%i", mask[[1]]))
+  warning(mask[[1]])
+  printw("Mouse example\n")
+  refresh()
+
+  halfdelay(20) # quick timeout
+  ch = getch()
+  warning(ch)
+  if (ch == KEYS$KEY_MOUSE) {
+    printw("You clicked the Mouse !!\n")
+    refresh()
+  }
+
+
+  refresh()
+  Sys.sleep(sleep)
+  clear()
+  refresh()
+
+}
+# nocov end

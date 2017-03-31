@@ -47,3 +47,21 @@ void _mouse_events(int *events) {
 void _has_mouse(int *_out) {
   *_out = ((has_mouse() == TRUE) ? 1 : 0);
 }
+
+void _getmouse(int* _id, int *_x, int* _y, int* _z, int* _bstate, int* _status) {
+  MEVENT event;
+  int code = getmouse(&event);
+  *_status = (code == OK) ? 1 : 0;
+
+  *_id = event.id;
+  *_x = event.x;
+  *_y = event.y;
+  *_z = event.z;
+  *_bstate = event.bstate;
+}
+
+void _mousemask(int* mask, int* _effective, int* _oldmask) {
+  mmask_t oldmask;
+  *_effective = mousemask(*mask, &oldmask);
+  *_oldmask = oldmask;
+}
