@@ -13,6 +13,7 @@ TRUE iff mouse support is initialized
 test if the mouse driver has been successfully initialized.
 }
 \seealso{
-Other mouse: \code{\link{mouse_events}}
+Other mouse: \code{\link{getmouse_event}},
+  \code{\link{mouse_events}}, \code{\link{mousemask}}
 }
 

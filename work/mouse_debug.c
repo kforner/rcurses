@@ -6,19 +6,21 @@ int main() {
     MEVENT event;
 
     initscr();
-    raw();
+//    raw();
     keypad(stdscr, TRUE);
-    noecho();
+//    noecho();
 
-    clear();
-    cbreak();
+//    clear();
+    //cbreak();
 
     mousemask(ALL_MOUSE_EVENTS | REPORT_MOUSE_POSITION, NULL);
 
     while ((ch = getch()) != 'q') {
         count++;
         mvprintw(1, 1, "Has mouse: %d", has_mouse());
-        mvprintw(2, 1, "Key code: %x; mouse code:%x", ch, KEY_MOUSE);
+        mvprintw(2, 1, "Key code: %x; mouse code:%x, Key Name:%s", ch, KEY_MOUSE,
+                 keyname(ch));
+
         if (ch == KEY_MOUSE) {
             assert(getmouse(&event) == OK);
             mvprintw(3, 3, "Mouse Event: x=%d, y=%d z=%d",

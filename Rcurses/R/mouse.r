@@ -120,7 +120,9 @@ getmouse_event <- function() {
 #' @export
 #' @family mouse
 #' @export
-mousemask <- function(mask) {
+mousemask <- function(
+  mask = bitwOr(MOUSE$ALL_MOUSE_EVENTS, MOUSE$REPORT_MOUSE_POSITION))
+{
   res <- .c('_mousemask',
     mask = as.integer(mask),
     effective = integer(1),

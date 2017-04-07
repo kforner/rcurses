@@ -4,7 +4,7 @@
 \alias{MOUSE}
 \title{Mouse constants}
 \description{
-Mouse constants
+mouse event type masks which may be defined
 }
 \seealso{
 mouse_events

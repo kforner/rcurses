@@ -317,33 +317,60 @@ example_getnstr <- function(sleep = 5, msg = 'Just a string') {
 #' @export
 #' @family examples
 # nocov start
-example_mouse <- function(sleep = 5) {
+example_mouse <- function() {
   on.exit(endwin())
   initscr()
 
   clear()
-	noecho()
-	cbreak()
 
-  mask <- mousemask(MOUSE$ALL_MOUSE_EVENTS);
-  printw(sprintf("effective mask:%i", mask[[1]]))
-  warning(mask[[1]])
-  printw("Mouse example\n")
+  keypad()
+  mousemask();
+
+  printw("Mouse example: click the mouse\n")
   refresh()
 
-  halfdelay(20) # quick timeout
   ch = getch()
-  warning(ch)
   if (ch == KEYS$KEY_MOUSE) {
     printw("You clicked the Mouse !!\n")
     refresh()
   }
 
-
-  refresh()
-  Sys.sleep(sleep)
-  clear()
-  refresh()
+  Sys.sleep(1)
 
 }
 # nocov end
+
+#' mouse debug
+#'
+#' @export
+#' @family examples
+# nocov start
+example_mouse_debug <- function() {
+  on.exit(endwin())
+  initscr();
+  keypad()
+#  //    noecho();
+#
+#  //    clear();
+#  //cbreak();
+#
+  mousemask()
+  count <- 0
+  while ((ch = getch()) != KEYS$q) {
+    count <- count + 1
+    mvprintw(1, 1, sprintf("Has mouse: %s", has_mouse()))
+    mvprintw(2, 1, sprintf("Key code: %s; mouse code:%s", ch, KEYS$KEY_MOUSE))
+    if (ch == KEYS$KEY_MOUSE) {
+      event <- getmouse_event()
+      mvprintw(3, 3, "Mouse Event: x=%i, y=%i z=%i",
+        event$x, event$y, event$z)
+      mvprintw(4, 3, "Mouse device id: %x", event$id)
+      mvprintw(5, 3, "Mouse button mask: %i", event$bstate)
+    }
+    mvprintw(6, 1, "Event number: %i",count)
+    refresh()
+  }
+
+  clear()
+  refresh()
+}

@@ -19,6 +19,8 @@ Other examples: \code{\link{example_attributes}},
   \code{\link{example_color}}, \code{\link{example_getch}},
   \code{\link{example_getnstr}},
   \code{\link{example_hello}},
+  \code{\link{example_mouse_debug}},
+  \code{\link{example_mouse}},
   \code{\link{example_mvprintw}},
   \code{\link{example_window_border}}
 }

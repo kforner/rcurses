@@ -2,14 +2,15 @@
 % Please edit documentation in R/mouse.r
 \name{mouse_events}
 \alias{mouse_events}
-\title{fetch the mouse events values}
+\title{fetch the mouse events masks}
 \usage{
 mouse_events()
 }
 \description{
-fetch the mouse events values
+fetch the mouse events masks
 }
 \seealso{
-Other mouse: \code{\link{has_mouse}}
+Other mouse: \code{\link{getmouse_event}},
+  \code{\link{has_mouse}}, \code{\link{mousemask}}
 }
 
