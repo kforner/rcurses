@@ -51,3 +51,11 @@ SEXP _wtimeout(SEXP _win, SEXP _delay) {
                       INTEGER(_delay)[0]);
   return R_NilValue;
 }
+
+SEXP _nodelay(SEXP _win, SEXP _bf) {
+  if (!R_ExternalPtrAddr(_win)) return R_NilValue;
+  int status = nodelay((WINDOW*)R_ExternalPtrAddr(_win),
+                      INTEGER(_bf)[0]);
+  return create_status(status);
+}
+

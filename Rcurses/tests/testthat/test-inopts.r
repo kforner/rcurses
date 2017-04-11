@@ -31,6 +31,9 @@ is_rcmd_check <- function() nzchar(Sys.getenv('R_TESTS'))
     expect_error(timeout(1), NA)
     expect_error(timeout(-1), NA)
 
+    expect_error(nodelay(), NA)
+    expect_error(nodelay(FALSE), NA)
+
   })
 }
 test_that('inopts', .inopts())

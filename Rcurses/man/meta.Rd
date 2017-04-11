@@ -28,8 +28,9 @@ Initially, whether the terminal returns 7 or 8 significantss a  func-
 Other inopts: \code{\link{cbreak}}, \code{\link{echo}},
   \code{\link{halfdelay}}, \code{\link{intrflush}},
   \code{\link{keypad}}, \code{\link{nocbreak}},
-  \code{\link{noecho}}, \code{\link{noqiflush}},
-  \code{\link{noraw}}, \code{\link{qiflush}},
-  \code{\link{raw}}, \code{\link{timeout}}
+  \code{\link{nodelay}}, \code{\link{noecho}},
+  \code{\link{noqiflush}}, \code{\link{noraw}},
+  \code{\link{qiflush}}, \code{\link{raw}},
+  \code{\link{timeout}}
 }
 

@@ -29,8 +29,9 @@ nocbreak
 Other inopts: \code{\link{echo}}, \code{\link{halfdelay}},
   \code{\link{intrflush}}, \code{\link{keypad}},
   \code{\link{meta}}, \code{\link{nocbreak}},
-  \code{\link{noecho}}, \code{\link{noqiflush}},
-  \code{\link{noraw}}, \code{\link{qiflush}},
-  \code{\link{raw}}, \code{\link{timeout}}
+  \code{\link{nodelay}}, \code{\link{noecho}},
+  \code{\link{noqiflush}}, \code{\link{noraw}},
+  \code{\link{qiflush}}, \code{\link{raw}},
+  \code{\link{timeout}}
 }
 

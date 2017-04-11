@@ -214,3 +214,27 @@ timeout <- function(delay, win = stdscr()) {
   .call('_wtimeout', win, as.integer(delay))
   invisible()
 }
+
+#' cause getch to be a non-blocking call
+#'
+#' If  no input is ready, getch returns ERR.  If disabled (bf
+#'     is FALSE), getch waits until a key is pressed.
+#'
+#' While interpreting an input  escape  sequence,  wgetch(3x)
+#' sets a timer while waiting for the next character.  If no-
+#'   timeout(win, TRUE) is called, then wgetch does not  set  a
+#' timer.  The purpose of the timeout is to differentiate be-
+#'   tween sequences received from a  function  key  and  those
+#' typed by a user.
+#'
+#' @inheritParams window_params
+#' @param		bf	whether to enable or disable
+#' @return FALSE iff nothing  has  been typed during the blocking
+#' @export
+#' @seealso getch
+#' @family inopts
+nodelay <- function(bf = TRUE, win = stdscr()) {
+  status <- as.logical(.call('_nodelay', win, as.integer(bf)))
+  if (!status) stop('error in nodelay()')
+  invisible()
+}
