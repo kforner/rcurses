@@ -11,6 +11,7 @@ refresh the default window
 }
 \seealso{
 Other output: \code{\link{clear}}, \code{\link{mvprintw}},
-  \code{\link{printw}}, \code{\link{wrefresh}}
+  \code{\link{printw}}, \code{\link{waddch}},
+  \code{\link{wrefresh}}
 }
 

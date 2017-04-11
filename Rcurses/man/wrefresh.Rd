@@ -14,6 +14,7 @@ refresh a window
 }
 \seealso{
 Other output: \code{\link{clear}}, \code{\link{mvprintw}},
-  \code{\link{printw}}, \code{\link{refresh}}
+  \code{\link{printw}}, \code{\link{refresh}},
+  \code{\link{waddch}}
 }
 

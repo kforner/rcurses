@@ -15,6 +15,7 @@ The  clear  and wclear routines are like erase and werase,
 }
 \seealso{
 Other output: \code{\link{mvprintw}}, \code{\link{printw}},
-  \code{\link{refresh}}, \code{\link{wrefresh}}
+  \code{\link{refresh}}, \code{\link{waddch}},
+  \code{\link{wrefresh}}
 }
 
