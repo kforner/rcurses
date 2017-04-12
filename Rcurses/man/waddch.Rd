@@ -25,9 +25,8 @@ put the
       gin:
 }
 \seealso{
-Other output: \code{\link{addch}}, \code{\link{clear}},
-  \code{\link{mvaddch}}, \code{\link{mvprintw}},
-  \code{\link{mvwaddch}}, \code{\link{printw}},
-  \code{\link{refresh}}, \code{\link{wrefresh}}
+Other addch: \code{\link{addch}}, \code{\link{echochar}},
+  \code{\link{mvaddch}}, \code{\link{mvwaddch}},
+  \code{\link{wechochar}}
 }
 

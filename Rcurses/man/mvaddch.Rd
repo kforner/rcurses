@@ -19,9 +19,8 @@ mvaddch(y, x, ch, win = stdscr())
 mvaddch
 }
 \seealso{
-Other output: \code{\link{addch}}, \code{\link{clear}},
-  \code{\link{mvprintw}}, \code{\link{mvwaddch}},
-  \code{\link{printw}}, \code{\link{refresh}},
-  \code{\link{waddch}}, \code{\link{wrefresh}}
+Other addch: \code{\link{addch}}, \code{\link{echochar}},
+  \code{\link{mvwaddch}}, \code{\link{waddch}},
+  \code{\link{wechochar}}
 }
 

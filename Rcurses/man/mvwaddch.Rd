@@ -19,9 +19,8 @@ mvwaddch(win, y, x, ch)
 mvwaddch
 }
 \seealso{
-Other output: \code{\link{addch}}, \code{\link{clear}},
-  \code{\link{mvaddch}}, \code{\link{mvprintw}},
-  \code{\link{printw}}, \code{\link{refresh}},
-  \code{\link{waddch}}, \code{\link{wrefresh}}
+Other addch: \code{\link{addch}}, \code{\link{echochar}},
+  \code{\link{mvaddch}}, \code{\link{waddch}},
+  \code{\link{wechochar}}
 }
 

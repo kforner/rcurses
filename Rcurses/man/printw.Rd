@@ -14,9 +14,7 @@ If you want to move the cursor first and then print using printw() function,
 use move() first and then use printw()
 }
 \seealso{
-Other output: \code{\link{addch}}, \code{\link{clear}},
-  \code{\link{mvaddch}}, \code{\link{mvprintw}},
-  \code{\link{mvwaddch}}, \code{\link{refresh}},
-  \code{\link{waddch}}, \code{\link{wrefresh}}
+Other output: \code{\link{clear}}, \code{\link{mvprintw}},
+  \code{\link{refresh}}, \code{\link{wrefresh}}
 }
 

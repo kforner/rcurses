@@ -13,3 +13,13 @@ context('addch')
 }
 test_that('waddch_all', .waddch_all())
 
+
+
+.wechocar_all <- function() {
+  on.exit(endwin())
+  initscr()
+
+  expect_error(wechochar(stdscr(), '*'), NA)
+  expect_error(echochar('*'), NA)
+}
+test_that('wechocar_all_all', .wechocar_all())

@@ -11,7 +11,7 @@
 #' @inheritParams window_params
 #' @param ch 		a character to print
 #' @export
-#' @family output
+#' @family addch
 waddch <- function(win, ch) {
   if (length(ch) != 1 || nchar(ch) != 1)
     stop('give a single character')
@@ -24,7 +24,7 @@ waddch <- function(win, ch) {
 #'
 #' @inheritParams waddch
 #' @export
-#' @family output
+#' @family addch
 addch <- function(ch, win = stdscr()) {
   waddch(win, ch)
 }
@@ -34,7 +34,7 @@ addch <- function(ch, win = stdscr()) {
 #' @inheritParams waddch
 #' @inheritParams move
 #' @export
-#' @family output
+#' @family addch
 mvwaddch <- function(win, y, x, ch) {
   wmove(win, y, x)
   waddch(win, ch)
@@ -45,7 +45,38 @@ mvwaddch <- function(win, y, x, ch) {
 #' @inheritParams waddch
 #' @inheritParams move
 #' @export
-#' @family output
+#' @family addch
 mvaddch <- function(y, x, ch, win = stdscr()) {
   mvwaddch(win, y, x, ch)
+}
+
+#' optimized waddch + refresh
+#'
+#' The  echochar  and  wechochar routines are equivalent to a
+#' call to addch followed by a call to refresh(3x), or a call
+#' to  waddch  followed by a call to wrefresh.  The knowledge
+#' that only a single character is being output is used  and,
+#' for  non-control  characters,  a  considerable performance
+#' gain may be seen by using these routines instead of  their
+#' equivalents.
+#'
+#' @inheritParams waddch
+#' @export
+#' @family addch
+wechochar <- function(win, ch) {
+  if (length(ch) != 1 || nchar(ch) != 1)
+    stop('give a single character')
+  status <- as.logical(.call('_wechochar', win, as.character(ch)))
+
+  invisible(status)
+}
+
+#' echochar
+#'
+
+#' @inheritParams wechochar
+#' @export
+#' @family addch
+echochar <- function(ch, win = stdscr()) {
+  wechochar(win, ch)
 }

@@ -14,9 +14,7 @@ The  clear  and wclear routines are like erase and werase,
  on the next call to wrefresh for that window and repainted from scratch.
 }
 \seealso{
-Other output: \code{\link{addch}}, \code{\link{mvaddch}},
-  \code{\link{mvprintw}}, \code{\link{mvwaddch}},
-  \code{\link{printw}}, \code{\link{refresh}},
-  \code{\link{waddch}}, \code{\link{wrefresh}}
+Other output: \code{\link{mvprintw}}, \code{\link{printw}},
+  \code{\link{refresh}}, \code{\link{wrefresh}}
 }
 
