@@ -29,3 +29,23 @@ addch <- function(ch, win = stdscr()) {
   waddch(win, ch)
 }
 
+#' mvwaddch
+#'
+#' @inheritParams waddch
+#' @inheritParams move
+#' @export
+#' @family output
+mvwaddch <- function(win, y, x, ch) {
+  wmove(win, y, x)
+  waddch(win, ch)
+}
+
+#' mvaddch
+#'
+#' @inheritParams waddch
+#' @inheritParams move
+#' @export
+#' @family output
+mvaddch <- function(y, x, ch, win = stdscr()) {
+  mvwaddch(win, y, x, ch)
+}

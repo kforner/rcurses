@@ -26,7 +26,8 @@ put the
 }
 \seealso{
 Other output: \code{\link{addch}}, \code{\link{clear}},
-  \code{\link{mvprintw}}, \code{\link{printw}},
+  \code{\link{mvaddch}}, \code{\link{mvprintw}},
+  \code{\link{mvwaddch}}, \code{\link{printw}},
   \code{\link{refresh}}, \code{\link{wrefresh}}
 }
 
