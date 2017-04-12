@@ -2,12 +2,14 @@ context('addch')
 
 
 
-.waddch <- function() {
+.waddch_all <- function() {
   on.exit(endwin())
   initscr()
 
-  expect_error(waddch('toto'), 'give a single character')
-  expect_error(waddch('*', stdscr()), NA)
+
+  expect_error(waddch(stdscr(), '*'), NA)
+  expect_error(addch('toto'), 'give a single character')
 
 }
-test_that('waddch', .waddch())
+test_that('waddch_all', .waddch_all())
+

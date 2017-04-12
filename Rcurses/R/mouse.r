@@ -113,7 +113,7 @@ getmouse_event <- function() {
 #'        the  mouse pointer; setting a nonzero mask may turn it on.
 #'        Whether this happens is device-dependent.
 #'
-#'
+#' @param mask	the mask to set the mouse  events are reported
 #' @return a named list of effective, old mask:
 #'   a mask to indicate which  of  the  specified  mouse events can be reported,
 #'  and the previous mask

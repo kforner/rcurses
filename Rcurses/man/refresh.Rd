@@ -10,8 +10,8 @@ refresh()
 refresh the default window
 }
 \seealso{
-Other output: \code{\link{clear}}, \code{\link{mvprintw}},
-  \code{\link{printw}}, \code{\link{waddch}},
-  \code{\link{wrefresh}}
+Other output: \code{\link{addch}}, \code{\link{clear}},
+  \code{\link{mvprintw}}, \code{\link{printw}},
+  \code{\link{waddch}}, \code{\link{wrefresh}}
 }
 

@@ -1,2 +1,3 @@
-echochar.r	ncurses echochar test
-gdc.r	ncurses Great Digital Clock (uses color)
+echochar	"ncurses echochar test"
+gdc	        "ncurses Great Digital Clock (uses color)"
+

@@ -6,6 +6,9 @@
 \usage{
 mousemask(mask = bitwOr(MOUSE$ALL_MOUSE_EVENTS, MOUSE$REPORT_MOUSE_POSITION))
 }
+\arguments{
+\item{mask}{the mask to set the mouse  events are reported}
+}
 \value{
 a named list of effective, old mask:
   a mask to indicate which  of  the  specified  mouse events can be reported,

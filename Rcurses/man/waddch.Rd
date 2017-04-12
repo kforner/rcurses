@@ -2,20 +2,31 @@
 % Please edit documentation in R/addch.r
 \name{waddch}
 \alias{waddch}
-\title{work much like printf()}
+\title{put a character
+put the
+      character ch into the given window at its  current  window
+      position,  which  is then advanced.  They are analogous to
+      putchar in stdio(3).  If the advance is at the right  mar-
+      gin:}
 \usage{
-waddch(ch, win = stdscr())
+waddch(win, ch)
 }
 \arguments{
+\item{win}{a window object as an external pointer}
+
 \item{ch}{a character to print}
 }
 \description{
-If you want to move the cursor first and then print using printw() function,
-use move() first and then use printw()
+put a character
+put the
+      character ch into the given window at its  current  window
+      position,  which  is then advanced.  They are analogous to
+      putchar in stdio(3).  If the advance is at the right  mar-
+      gin:
 }
 \seealso{
-Other output: \code{\link{clear}}, \code{\link{mvprintw}},
-  \code{\link{printw}}, \code{\link{refresh}},
-  \code{\link{wrefresh}}
+Other output: \code{\link{addch}}, \code{\link{clear}},
+  \code{\link{mvprintw}}, \code{\link{printw}},
+  \code{\link{refresh}}, \code{\link{wrefresh}}
 }
 

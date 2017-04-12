@@ -19,8 +19,8 @@ mvprintw(y, x, str, ...)
 may die if the position is outside the window
 }
 \seealso{
-Other output: \code{\link{clear}}, \code{\link{printw}},
-  \code{\link{refresh}}, \code{\link{waddch}},
-  \code{\link{wrefresh}}
+Other output: \code{\link{addch}}, \code{\link{clear}},
+  \code{\link{printw}}, \code{\link{refresh}},
+  \code{\link{waddch}}, \code{\link{wrefresh}}
 }
 

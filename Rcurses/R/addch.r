@@ -1,18 +1,31 @@
 ### ncurses curs_addch functions
 # cf http://invisible-island.net/ncurses/man/curs_addch.3x.html
 
-#' work much like printf()
+#' put a character
+#'put the
+#'       character ch into the given window at its  current  window
+#'       position,  which  is then advanced.  They are analogous to
+#'       putchar in stdio(3).  If the advance is at the right  mar-
+#'       gin:
 #'
-#' If you want to move the cursor first and then print using printw() function,
-#' use move() first and then use printw()
-#'
+#' @inheritParams window_params
 #' @param ch 		a character to print
 #' @export
 #' @family output
-waddch <- function(ch, win = stdscr()) {
+waddch <- function(win, ch) {
   if (length(ch) != 1 || nchar(ch) != 1)
     stop('give a single character')
   status <- as.logical(.call('_waddch', win, as.character(ch)))
 
   invisible(status)
 }
+
+#' addch
+#'
+#' @inheritParams waddch
+#' @export
+#' @family output
+addch <- function(ch, win = stdscr()) {
+  waddch(win, ch)
+}
+
