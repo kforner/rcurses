@@ -118,7 +118,7 @@ init_pair <- function(pair, b, f) {
   res <- .c('_init_pair',
     as.integer(pair), as.integer(b), as.integer(f), status = integer(1))
   if (!as.logical(res$status))
-    stop("Error in init_pair(), can not allocate color pair")
+    stop("Error in init_pair(), can not allocate color pair:", pair)
   invisible()
 }
 
