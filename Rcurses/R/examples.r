@@ -126,6 +126,7 @@ example_getch <- function() {
   cbreak()
   keypad()
   noecho()
+  nodelay(FALSE)
 
   key <- 0
   repeat {
