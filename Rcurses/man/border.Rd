@@ -30,7 +30,8 @@ border(win = stdscr(), ls = 0, rs = 0, ts = 0, bs = 0, tl = 0,
 draw a box around the edges of a window
 }
 \seealso{
-Other border: \code{\link{box}}, \code{\link{vline}},
+Other border: \code{\link{box}}, \code{\link{hline}},
+  \code{\link{vline}}, \code{\link{whline}},
   \code{\link{wvline}}
 }
 

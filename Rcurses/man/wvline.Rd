@@ -5,15 +5,9 @@
 \title{draw  a  vertical  (top  to bottom) line}
 \usage{
 wvline(win, ch, n)
-
-wvline(win, ch, n)
 }
 \arguments{
 \item{win}{a window object as an external pointer}
-
-\item{ch}{a character to draw the line with}
-
-\item{n}{the max nb of characters to draw}
 
 \item{ch}{a character to draw the line with}
 
@@ -25,18 +19,10 @@ The vline and wvline functions draw  a  vertical  (top  to
        tion in the window.  The current cursor  position  is  not
        changed.   The  line  is  at most n characters long, or as
        many as fit into the window.
-
-The vline and wvline functions draw  a  vertical  (top  to
-       bottom) line using ch starting at the current cursor posi-
-       tion in the window.  The current cursor  position  is  not
-       changed.   The  line  is  at most n characters long, or as
-       many as fit into the window.
 }
 \seealso{
 Other border: \code{\link{border}}, \code{\link{box}},
-  \code{\link{vline}}
-
-Other border: \code{\link{border}}, \code{\link{box}},
-  \code{\link{vline}}
+  \code{\link{hline}}, \code{\link{vline}},
+  \code{\link{whline}}
 }
 

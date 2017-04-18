@@ -65,28 +65,6 @@ wvline <- function(win, ch, n) {
   invisible(status)
 }
 
-#' draw  a  vertical  (top  to bottom) line
-#'
-#'  The vline and wvline functions draw  a  vertical  (top  to
-#'        bottom) line using ch starting at the current cursor posi-
-#'        tion in the window.  The current cursor  position  is  not
-#'        changed.   The  line  is  at most n characters long, or as
-#'        many as fit into the window.
-#'
-#' @inheritParams window_params
-#' @param ch 		a character to draw the line with
-#' @param n			the max nb of characters to draw
-#' @export
-#' @family border
-wvline <- function(win, ch, n) {
-  if (length(ch) != 1 || nchar(ch) != 1)
-    stop('give a single character')
-  status <- as.logical(.call('_wvline', win, as.character(ch), as.integer(n)))
-
-  invisible(status)
-}
-
-
 
 #' vline
 #'
@@ -95,4 +73,28 @@ wvline <- function(win, ch, n) {
 #' @family border
 vline <- function(ch, n, win = stdscr()) {
   wvline(win, ch, n)
+}
+
+#' draw  an horizontal  (top  to bottom) line
+#'
+#' @inheritParams wvline
+#' @export
+#' @seealso wvline
+#' @family border
+whline <- function(win, ch, n) {
+  if (length(ch) != 1 || nchar(ch) != 1)
+    stop('give a single character')
+  status <- as.logical(.call('_whline', win, as.character(ch), as.integer(n)))
+
+  invisible(status)
+}
+
+
+#' hline
+#'
+#' @inheritParams whline
+#' @export
+#' @family border
+hline <- function(ch, n, win = stdscr()) {
+  whline(win, ch, n)
 }

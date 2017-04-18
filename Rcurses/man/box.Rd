@@ -13,7 +13,8 @@ box(win = stdscr())
 draw a box around a window
 }
 \seealso{
-Other border: \code{\link{border}}, \code{\link{vline}},
+Other border: \code{\link{border}}, \code{\link{hline}},
+  \code{\link{vline}}, \code{\link{whline}},
   \code{\link{wvline}}
 }
 
