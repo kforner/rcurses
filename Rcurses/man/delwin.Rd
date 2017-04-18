@@ -18,8 +18,7 @@ free all memory associated with it (it does not actually erase the win-
      the main window can be deleted.
 }
 \seealso{
-Other window: \code{\link{border}}, \code{\link{box}},
-  \code{\link{derwin}}, \code{\link{dupwin}},
+Other window: \code{\link{derwin}}, \code{\link{dupwin}},
   \code{\link{mvderwin}}, \code{\link{mvwin}},
   \code{\link{newwin}}, \code{\link{subwin}},
   \code{\link{syncok}}, \code{\link{wsyncup}}

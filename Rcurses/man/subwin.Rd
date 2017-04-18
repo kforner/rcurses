@@ -29,8 +29,7 @@ The subwindow shares memory with  the  window
      the subwindow.
 }
 \seealso{
-Other window: \code{\link{border}}, \code{\link{box}},
-  \code{\link{delwin}}, \code{\link{derwin}},
+Other window: \code{\link{delwin}}, \code{\link{derwin}},
   \code{\link{dupwin}}, \code{\link{mvderwin}},
   \code{\link{mvwin}}, \code{\link{newwin}},
   \code{\link{syncok}}, \code{\link{wsyncup}}

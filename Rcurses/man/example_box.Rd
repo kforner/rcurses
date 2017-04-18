@@ -16,6 +16,7 @@ box example
 Other examples: \code{\link{example_attributes}},
   \code{\link{example_attron}},
   \code{\link{example_change_color}},
+  \code{\link{example_color_set}},
   \code{\link{example_color}}, \code{\link{example_getch}},
   \code{\link{example_getnstr}},
   \code{\link{example_hello}},

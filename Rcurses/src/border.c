@@ -27,3 +27,11 @@ SEXP _box00(SEXP _win) {
   box((WINDOW*)R_ExternalPtrAddr(_win), 0, 0);
   return R_NilValue;
 }
+
+SEXP _wvline(SEXP win, SEXP ch, SEXP n) {
+  if (!R_ExternalPtrAddr(win)) return R_NilValue;
+  int status = wvline((WINDOW*)R_ExternalPtrAddr(win),
+                      CHAR(STRING_ELT(ch, 0))[0], INTEGER(n)[0]);
+  return create_status(status);
+}
+

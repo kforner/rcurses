@@ -30,10 +30,7 @@ border(win = stdscr(), ls = 0, rs = 0, ts = 0, bs = 0, tl = 0,
 draw a box around the edges of a window
 }
 \seealso{
-Other window: \code{\link{box}}, \code{\link{delwin}},
-  \code{\link{derwin}}, \code{\link{dupwin}},
-  \code{\link{mvderwin}}, \code{\link{mvwin}},
-  \code{\link{newwin}}, \code{\link{subwin}},
-  \code{\link{syncok}}, \code{\link{wsyncup}}
+Other border: \code{\link{box}}, \code{\link{vline}},
+  \code{\link{wvline}}
 }
 

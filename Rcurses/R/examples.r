@@ -52,6 +52,39 @@ example_color <- function(sleep = 5) {
   refresh()
 }
 
+
+#' color_set
+#'
+#' @export
+#' @family examples
+example_color_set <- function() {
+  on.exit(endwin())
+  initscr()
+  cbreak()
+  noecho()
+  clear()
+
+  printw("coucou\n")
+
+  if (!has_colors()) stop('no color support!')
+  start_color()
+
+  res <- pair_content(0)
+	printw(sprintf("pair 0 contains (%d,%d)\n", res$F, res$B))
+  refresh()
+	getch();
+
+
+
+
+  refresh()
+
+  clear()
+  refresh()
+
+  res
+}
+
 #' change color example
 #'
 #'

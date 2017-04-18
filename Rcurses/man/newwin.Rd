@@ -27,8 +27,7 @@ If either nlines or ncols is zero, they default to
      COLS - begin_x.
 }
 \seealso{
-Other window: \code{\link{border}}, \code{\link{box}},
-  \code{\link{delwin}}, \code{\link{derwin}},
+Other window: \code{\link{delwin}}, \code{\link{derwin}},
   \code{\link{dupwin}}, \code{\link{mvderwin}},
   \code{\link{mvwin}}, \code{\link{subwin}},
   \code{\link{syncok}}, \code{\link{wsyncup}}
